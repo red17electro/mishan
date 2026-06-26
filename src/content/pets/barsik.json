@@ -1,0 +1,54 @@
+{
+  "slug": "barsik",
+  "name": {
+    "en": "Barsik",
+    "uk": "Барсик"
+  },
+  "species": "cat",
+  "sex": "male",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "small",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": [
+    "quiet",
+    "independent",
+    "soft"
+  ],
+  "description_short": {
+    "en": "A quiet adult cat who loves warm corners and patient people.",
+    "uk": "Спокійний дорослий кіт, який любить теплі місця і терплячих людей."
+  },
+  "description_full": {
+    "en": "Barsik is calm and observant. He needs time to adjust, but enjoys attention when he feels safe.",
+    "uk": "Барсик спокійний і уважний. Йому потрібен час, щоб звикнути, але коли він почувається безпечно, йому подобається увага."
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "unknown",
+    "special_needs": {
+      "en": "None known",
+      "uk": "Невідомо"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "yes",
+    "dogs": "unknown"
+  },
+  "photos": [
+    "/images/test-pets/barsik.svg"
+  ],
+  "videos": [],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": true,
+  "created_at": "2026-06-20",
+  "updated_at": "2026-06-26"
+}

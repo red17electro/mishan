@@ -1,0 +1,103 @@
+---
+import type { Language, Pet } from '@/types';
+import { t } from '@/i18n/ui';
+import PetCard from './PetCard.astro';
+
+interface Props {
+  pets: Pet[];
+  lang: Language;
+}
+const { pets, lang } = Astro.props;
+---
+<section class="catalog-tools" aria-label={t(lang, 'filters')}>
+  <label>{t(lang, 'species')}
+    <select data-filter="species">
+      <option value="all">{t(lang, 'all')}</option>
+      <option value="dog">{t(lang, 'dog')}</option>
+      <option value="cat">{t(lang, 'cat')}</option>
+      <option value="other">{t(lang, 'other')}</option>
+    </select>
+  </label>
+  <label>{t(lang, 'size')}
+    <select data-filter="size">
+      <option value="all">{t(lang, 'all')}</option>
+      <option value="small">{t(lang, 'small')}</option>
+      <option value="medium">{t(lang, 'medium')}</option>
+      <option value="large">{t(lang, 'large')}</option>
+    </select>
+  </label>
+  <label>{t(lang, 'age')}
+    <select data-filter="ageGroup">
+      <option value="all">{t(lang, 'all')}</option>
+      <option value="baby">{t(lang, 'baby')}</option>
+      <option value="young">{t(lang, 'young')}</option>
+      <option value="adult">{t(lang, 'adult')}</option>
+      <option value="senior">{t(lang, 'senior')}</option>
+    </select>
+  </label>
+  <label>{t(lang, 'status')}
+    <select data-filter="status">
+      <option value="all">{t(lang, 'all')}</option>
+      <option value="available">{t(lang, 'available')}</option>
+      <option value="reserved">{t(lang, 'reserved')}</option>
+      <option value="adopted">{t(lang, 'adopted')}</option>
+    </select>
+  </label>
+  <label>{t(lang, 'sort')}
+    <select data-sort>
+      <option value="newest">{t(lang, 'newest')}</option>
+      <option value="name">{t(lang, 'nameAZ')}</option>
+      <option value="age">{t(lang, 'ageYoungest')}</option>
+      <option value="size">{t(lang, 'sizeSmallest')}</option>
+    </select>
+  </label>
+</section>
+
+<section class="pet-grid" data-pet-grid>
+  {pets.map((pet) => <PetCard pet={pet} lang={lang} />)}
+</section>
+<p class="empty-state" data-empty-state hidden>{t(lang, 'noPets')}</p>
+
+<script>
+  const sizeRank: Record<string, number> = { small: 1, medium: 2, large: 3 };
+  const grid = document.querySelector<HTMLElement>('[data-pet-grid]');
+  const emptyState = document.querySelector<HTMLElement>('[data-empty-state]');
+  const cards = Array.from(document.querySelectorAll<HTMLElement>('[data-pet-card]'));
+  const filters = Array.from(document.querySelectorAll<HTMLSelectElement>('[data-filter]'));
+  const sortSelect = document.querySelector<HTMLSelectElement>('[data-sort]');
+
+  function matchesFilters(card: HTMLElement) {
+    return filters.every((select) => {
+      const value = select.value;
+      if (value === 'all') return true;
+      const key = select.dataset.filter;
+      const dataKey = key === 'ageGroup' ? 'ageGroup' : key;
+      return dataKey ? card.dataset[dataKey] === value : true;
+    });
+  }
+
+  function sortCards(visibleCards: HTMLElement[]) {
+    const mode = sortSelect?.value ?? 'newest';
+    return visibleCards.sort((a, b) => {
+      if (mode === 'name') return (a.dataset.name ?? '').localeCompare(b.dataset.name ?? '');
+      if (mode === 'age') return Number(a.dataset.ageValue ?? 0) - Number(b.dataset.ageValue ?? 0);
+      if (mode === 'size') return (sizeRank[a.dataset.size ?? ''] ?? 99) - (sizeRank[b.dataset.size ?? ''] ?? 99);
+      return (b.dataset.created ?? '').localeCompare(a.dataset.created ?? '');
+    });
+  }
+
+  function applyCatalogState() {
+    if (!grid || !emptyState) return;
+    const visibleCards = sortCards(cards.filter(matchesFilters));
+    cards.forEach((card) => card.hidden = true);
+    visibleCards.forEach((card) => {
+      card.hidden = false;
+      grid.appendChild(card);
+    });
+    emptyState.hidden = visibleCards.length > 0;
+  }
+
+  filters.forEach((select) => select.addEventListener('change', applyCatalogState));
+  sortSelect?.addEventListener('change', applyCatalogState);
+  applyCatalogState();
+</script>

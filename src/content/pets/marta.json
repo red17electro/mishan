@@ -1,0 +1,54 @@
+{
+  "slug": "marta",
+  "name": {
+    "en": "Marta",
+    "uk": "Марта"
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "baby",
+  "age_value": 7,
+  "age_unit": "months",
+  "size": "small",
+  "status": "adopted",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": [
+    "playful",
+    "friendly",
+    "curious"
+  ],
+  "description_short": {
+    "en": "A playful puppy; this page stays live for QR-code continuity.",
+    "uk": "Грайливе цуценя; ця сторінка лишається доступною для QR-кодів."
+  },
+  "description_full": {
+    "en": "Marta is test content for the adopted-pet state. Adopted pet pages should not be deleted because printed QR codes may continue to point here.",
+    "uk": "Марта — тестовий приклад стану «вже вдома». Сторінки адоптованих тварин не слід видаляти, бо надруковані QR-коди можуть і далі вести сюди."
+  },
+  "health": {
+    "sterilized": "no",
+    "vaccinated": "unknown",
+    "special_needs": {
+      "en": "None known",
+      "uk": "Невідомо"
+    }
+  },
+  "compatibility": {
+    "children": "yes",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/test-pets/marta.svg"
+  ],
+  "videos": [],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-06-10",
+  "updated_at": "2026-06-26"
+}

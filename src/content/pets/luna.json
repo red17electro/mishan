@@ -1,0 +1,54 @@
+{
+  "slug": "luna",
+  "name": {
+    "en": "Luna",
+    "uk": "Луна"
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "young",
+  "age_value": 2,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": [
+    "calm",
+    "gentle",
+    "good_with_people"
+  ],
+  "description_short": {
+    "en": "A gentle young dog looking for a calm and loving home.",
+    "uk": "Лагідна молода собака шукає спокійний і люблячий дім."
+  },
+  "description_full": {
+    "en": "Luna is shy at first, but very affectionate once she trusts a person. She would do best with patient adopters who can give her stability and routine.",
+    "uk": "Спочатку Луна трохи сором’язлива, але коли починає довіряти людині, стає дуже лагідною. Їй підійде терпляча родина, яка подарує стабільність і спокій."
+  },
+  "health": {
+    "sterilized": "unknown",
+    "vaccinated": "unknown",
+    "special_needs": {
+      "en": "None known",
+      "uk": "Невідомо"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/test-pets/luna.svg"
+  ],
+  "videos": [],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": true,
+  "created_at": "2026-06-26",
+  "updated_at": "2026-06-26"
+}

@@ -1,0 +1,28 @@
+{
+  "slug": "placeholder-volunteer",
+  "name": "Volunteer Name",
+  "region": {
+    "en": "Germany",
+    "uk": "Німеччина"
+  },
+  "languages": [
+    "Ukrainian",
+    "English",
+    "German"
+  ],
+  "role": {
+    "en": "Adoption questions and international coordination",
+    "uk": "Питання щодо адопції та міжнародна координація"
+  },
+  "contact_methods": {
+    "whatsapp": "",
+    "telegram": "",
+    "phone": "",
+    "email": ""
+  },
+  "public_contact_note": {
+    "en": "Contact details will be added later.",
+    "uk": "Контактні дані буде додано пізніше."
+  },
+  "show_phone_publicly": false
+}

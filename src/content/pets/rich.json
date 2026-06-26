@@ -1,0 +1,54 @@
+{
+  "slug": "rich",
+  "name": {
+    "en": "Rich",
+    "uk": "Річ"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "senior",
+  "age_value": 8,
+  "age_unit": "years",
+  "size": "large",
+  "status": "reserved",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": [
+    "loyal",
+    "calm",
+    "experienced_owner"
+  ],
+  "description_short": {
+    "en": "A loyal senior dog who deserves comfort and safety.",
+    "uk": "Вірний старший пес, який заслуговує на комфорт і безпеку."
+  },
+  "description_full": {
+    "en": "Rich is a steady, older dog. He likes calm walks and familiar people. His future home should be peaceful and predictable.",
+    "uk": "Річ — спокійний старший пес. Він любить тихі прогулянки і знайомих людей. Йому потрібен мирний і передбачуваний дім."
+  },
+  "health": {
+    "sterilized": "unknown",
+    "vaccinated": "unknown",
+    "special_needs": {
+      "en": "Senior care may be needed",
+      "uk": "Може потребувати догляду для старших собак"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "unknown"
+  },
+  "photos": [
+    "/images/test-pets/rich.svg"
+  ],
+  "videos": [],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": true,
+  "created_at": "2026-06-18",
+  "updated_at": "2026-06-26"
+}

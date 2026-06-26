@@ -1,0 +1,59 @@
+---
+import type { Language } from '@/types';
+import { languages, t } from '@/i18n/ui';
+import '@/styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  lang: Language;
+}
+
+const { title, description = 'Mishan pet shelter website', lang } = Astro.props;
+const nav = [
+  { href: `/${lang}`, label: t(lang, 'navHome') },
+  { href: `/${lang}/pets`, label: t(lang, 'navPets') },
+  { href: `/${lang}/donate`, label: t(lang, 'navDonate') },
+  { href: `/${lang}/volunteers`, label: t(lang, 'navVolunteers') },
+  { href: `/${lang}/about`, label: t(lang, 'navAbout') }
+];
+const currentPath = Astro.url.pathname;
+function switchPath(targetLang: Language) {
+  return currentPath.replace(/^\/(en|uk)(?=\/|$)/, `/${targetLang}`) || `/${targetLang}`;
+}
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title} · Mishan</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href={`/${lang}`} aria-label="Mishan home">
+        <span class="brand-mark">🐾</span>
+        <span>
+          <strong>{t(lang, 'siteName')}</strong>
+          <small>{t(lang, 'tagline')}</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+      <div class="language-switch" aria-label={t(lang, 'language')}>
+        {(Object.keys(languages) as Language[]).map((code) => (
+          <a class={code === lang ? 'active' : ''} href={switchPath(code)}>{code.toUpperCase()}</a>
+        ))}
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <p><strong>Mishan</strong> — {t(lang, 'tagline')}</p>
+      <p class="muted">Volunteer-run prototype. Do not publish sensitive shelter locations or unapproved private phone numbers.</p>
+    </footer>
+  </body>
+</html>

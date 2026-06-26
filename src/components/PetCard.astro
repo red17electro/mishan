@@ -1,0 +1,36 @@
+---
+import type { Language, Pet } from '@/types';
+import { localize, t } from '@/i18n/ui';
+
+interface Props {
+  pet: Pet;
+  lang: Language;
+}
+const { pet, lang } = Astro.props;
+const mainPhoto = pet.photos[0] ?? '/images/placeholder-pet.svg';
+---
+<article
+  class="pet-card"
+  data-pet-card
+  data-species={pet.species}
+  data-size={pet.size}
+  data-age-group={pet.age_group}
+  data-status={pet.status}
+  data-name={localize(pet.name, lang).toLowerCase()}
+  data-created={pet.created_at}
+  data-age-value={pet.age_value}
+>
+  <a href={`/${lang}/pets/${pet.slug}`} class="pet-card__image-wrap">
+    <img src={mainPhoto} alt={localize(pet.name, lang)} loading="lazy" />
+    <span class={`status-badge status-badge--${pet.status}`}>{t(lang, pet.status)}</span>
+  </a>
+  <div class="pet-card__body">
+    <p class="eyebrow">{t(lang, pet.species)} · {t(lang, pet.size)} · {t(lang, pet.age_group)}</p>
+    <h3>{localize(pet.name, lang)}</h3>
+    <p>{localize(pet.description_short, lang)}</p>
+    <div class="tag-list">
+      {pet.character_tags.slice(0, 3).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}
+    </div>
+    <a class="text-link" href={`/${lang}/pets/${pet.slug}`}>{t(lang, 'viewProfile')} →</a>
+  </div>
+</article>

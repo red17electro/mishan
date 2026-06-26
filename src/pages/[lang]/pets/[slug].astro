@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getPet, getVolunteer, pets } from '@/lib/data';
+import { localize, t } from '@/i18n/ui';
+import type { Language } from '@/types';
+
+export function getStaticPaths() {
+  return ['en', 'uk'].flatMap((lang) => pets.map((pet) => ({ params: { lang, slug: pet.slug } })));
+}
+const lang = Astro.params.lang as Language;
+const pet = getPet(Astro.params.slug!);
+if (!pet) throw new Error(`Pet not found: ${Astro.params.slug}`);
+const volunteer = getVolunteer(pet.contact.volunteer_slug);
+const mainPhoto = pet.photos[0] ?? '/images/placeholder-pet.svg';
+const boolLabel = (value: 'yes' | 'no' | 'unknown') => value === 'yes' ? t(lang, 'yes') : value === 'no' ? t(lang, 'no') : t(lang, 'unknown');
+---
+<BaseLayout title={localize(pet.name, lang)} lang={lang} description={localize(pet.description_short, lang)}>
+  <section class="section pet-profile">
+    <div class="pet-profile__media">
+      <img class="pet-profile__main-image" src={mainPhoto} alt={localize(pet.name, lang)} />
+      <div class="thumbnail-row">
+        {pet.photos.slice(1).map((photo) => <img src={photo} alt={localize(pet.name, lang)} loading="lazy" />)}
+      </div>
+    </div>
+    <article class="pet-profile__content">
+      <p class="eyebrow">{t(lang, pet.species)} · {t(lang, pet.size)} · {t(lang, pet.age_group)}</p>
+      <h1>{localize(pet.name, lang)}</h1>
+      <span class={`status-badge status-badge--${pet.status}`}>{t(lang, pet.status)}</span>
+      <p class="lead">{localize(pet.description_short, lang)}</p>
+      <div class="tag-list">{pet.character_tags.map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}</div>
+      <h2>{t(lang, 'aboutPet')}</h2>
+      <p>{localize(pet.description_full, lang)}</p>
+      <dl class="fact-grid">
+        <div><dt>{t(lang, 'sex')}</dt><dd>{t(lang, pet.sex)}</dd></div>
+        <div><dt>{t(lang, 'age')}</dt><dd>{pet.age_value} {pet.age_unit}</dd></div>
+        <div><dt>{t(lang, 'status')}</dt><dd>{t(lang, pet.status)}</dd></div>
+        <div><dt>{t(lang, 'tagline')}</dt><dd>{localize(pet.location_note, lang)}</dd></div>
+      </dl>
+      <h2>{t(lang, 'health')}</h2>
+      <dl class="fact-grid">
+        <div><dt>{t(lang, 'sterilized')}</dt><dd>{boolLabel(pet.health.sterilized)}</dd></div>
+        <div><dt>{t(lang, 'vaccinated')}</dt><dd>{boolLabel(pet.health.vaccinated)}</dd></div>
+        <div><dt>{t(lang, 'specialNeeds')}</dt><dd>{localize(pet.health.special_needs, lang)}</dd></div>
+      </dl>
+      <h2>{t(lang, 'compatibility')}</h2>
+      <dl class="fact-grid">
+        <div><dt>{t(lang, 'goodWithChildren')}</dt><dd>{boolLabel(pet.compatibility.children)}</dd></div>
+        <div><dt>{t(lang, 'goodWithCats')}</dt><dd>{boolLabel(pet.compatibility.cats)}</dd></div>
+        <div><dt>{t(lang, 'goodWithDogs')}</dt><dd>{boolLabel(pet.compatibility.dogs)}</dd></div>
+      </dl>
+      <div class="cta-panel">
+        <h2>{t(lang, 'contactVolunteer')}</h2>
+        <p>{volunteer ? `${volunteer.name} — ${localize(volunteer.public_contact_note, lang)}` : t(lang, 'volunteersText')}</p>
+        <a class="button button--primary" href={`/${lang}/volunteers`}>{t(lang, 'contactVolunteer')}</a>
+        <a class="button button--secondary" href={`/${lang}/donate`}>{t(lang, 'donate')}</a>
+      </div>
+    </article>
+  </section>
+</BaseLayout>

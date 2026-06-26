@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+<title id="title">Barsik placeholder</title>
+<desc id="desc">Placeholder pet image for Mishan prototype.</desc>
+<rect width="1200" height="900" fill="#ffe7ad"/>
+<circle cx="900" cy="190" r="130" fill="#f5c542" opacity="0.75"/>
+<path d="M0 690 C180 610 340 720 520 650 C720 570 880 660 1200 570 L1200 900 L0 900 Z" fill="#ffffff" opacity="0.55"/>
+<text x="90" y="145" fill="#6b5410" font-family="Arial, sans-serif" font-size="78" font-weight="800">Mishan</text>
+<text x="90" y="235" fill="#6b5410" font-family="Arial, sans-serif" font-size="52">Barsik</text>
+<text x="600" y="560" text-anchor="middle" fill="#6b5410" font-family="Arial, sans-serif" font-size="280">🐱</text>
+<text x="600" y="760" text-anchor="middle" fill="#6b5410" font-family="Arial, sans-serif" font-size="44">Test media placeholder</text>
+</svg>

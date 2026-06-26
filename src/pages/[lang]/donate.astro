@@ -1,0 +1,16 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/ui';
+import type { Language } from '@/types';
+export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }]; }
+const lang = Astro.params.lang as Language;
+---
+<BaseLayout title={t(lang, 'donateTitle')} lang={lang}>
+  <section class="section page-intro narrow">
+    <p class="eyebrow">Mishan</p>
+    <h1>{t(lang, 'donateTitle')}</h1>
+    <p>{t(lang, 'donateText')}</p>
+    <a class="button button--primary" href="#" aria-disabled="true">{t(lang, 'paypalPlaceholder')}</a>
+    <p class="muted">Replace this placeholder with the shelter's real PayPal donation URL before launch.</p>
+  </section>
+</BaseLayout>

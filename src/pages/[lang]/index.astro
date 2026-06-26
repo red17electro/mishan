@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PetCard from '@/components/PetCard.astro';
+import { pets } from '@/lib/data';
+import { t } from '@/i18n/ui';
+import type { Language } from '@/types';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }];
+}
+const lang = Astro.params.lang as Language;
+const featuredPets = pets.filter((pet) => pet.featured).slice(0, 3);
+---
+<BaseLayout title={t(lang, 'navHome')} lang={lang} description={t(lang, 'heroText')}>
+  <section class="hero section">
+    <div class="hero__content">
+      <p class="eyebrow">{t(lang, 'tagline')}</p>
+      <h1>{t(lang, 'heroTitle')}</h1>
+      <p>{t(lang, 'heroText')}</p>
+      <div class="button-row">
+        <a class="button button--primary" href={`/${lang}/pets`}>{t(lang, 'adoptPet')}</a>
+        <a class="button button--secondary" href={`/${lang}/donate`}>{t(lang, 'donate')}</a>
+      </div>
+    </div>
+    <div class="hero__card">
+      <img src="/images/test-pets/luna.svg" alt="Mishan shelter pet illustration" />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Mishan</p>
+      <h2>{t(lang, 'featuredPets')}</h2>
+      <a class="text-link" href={`/${lang}/pets`}>{t(lang, 'allPets')} →</a>
+    </div>
+    <div class="pet-grid">
+      {featuredPets.map((pet) => <PetCard pet={pet} lang={lang} />)}
+    </div>
+  </section>
+</BaseLayout>
