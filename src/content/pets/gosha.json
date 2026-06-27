@@ -1,24 +1,24 @@
 {
-  "slug": "gosha",
+  "slug": "patron",
   "name": {
-    "en": "Gosha",
-    "uk": "Гоша"
+    "en": "Patron",
+    "uk": "Патрон"
   },
   "species": "dog",
   "sex": "male",
-  "age_group": "young",
-  "age_value": 11,
-  "age_unit": "months",
-  "size": "medium",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "small",
   "status": "available",
   "location_note": {
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
   "character_tags": [
-    "quiet",
-    "independent",
-    "soft"
+    "Тихий",
+    "Самостійний",
+    "Дружелюбний "
   ],
   "description_short": {
     "en": "A quiet dog that is doing everything alright",
@@ -29,17 +29,17 @@
     "uk": "Барсик спокійний і уважний. Йому потрібен час, щоб звикнути, але коли він почувається безпечно, йому подобається увага."
   },
   "health": {
-    "sterilized": "yes",
-    "vaccinated": "unknown",
+    "sterilized": "no",
+    "vaccinated": "yes",
     "special_needs": {
       "en": "None known",
       "uk": "Невідомо"
     }
   },
   "compatibility": {
-    "children": "unknown",
+    "children": "yes",
     "cats": "yes",
-    "dogs": "unknown"
+    "dogs": "no"
   },
   "photos": [
     "/images/test-pets/barsik.svg"
