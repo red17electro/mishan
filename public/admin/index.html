@@ -8,15 +8,64 @@
   <body>
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          const hash = window.location.hash || '';
-          const hasIdentityToken = hash.includes('invite_token=') || hash.includes('confirmation_token=') || hash.includes('recovery_token=');
-          if (!user && hasIdentityToken) {
-            window.netlifyIdentity.open();
+      (function () {
+        'use strict';
+
+        var DECAP_SRC = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
+        var IDENTITY_SCRIPT_TIMEOUT_MS = 20000;
+        
+        function debug(msg) {
+          console.log('[Mishan CMS Auth] ' + msg);
+        }
+
+        function warn(msg) {
+          console.warn('[Mishan CMS Auth] ' + msg);
+        }
+
+        // Wait for identity widget to be defined
+        function init() {
+          debug('Checking for window.netlifyIdentity...');
+          if (window.netlifyIdentity) {
+            debug('Found window.netlifyIdentity, binding events...');
+            bindEvents();
+          } else {
+            debug('window.netlifyIdentity not found, polling...');
+            setTimeout(init, 100);
           }
-        });
-      }
+        }
+
+        function bindEvents() {
+          var identity = window.netlifyIdentity;
+          identity.on('init', function(user) {
+            debug('Identity init event fired. User:', user ? user.email : 'null');
+            loadDecap();
+          });
+          
+          identity.on('error', function(err) {
+            warn('Identity error:', err);
+          });
+          
+          // Trigger init check
+          identity.init();
+        }
+
+        function loadDecap() {
+          debug('Injecting Decap CMS script');
+          var script = document.createElement('script');
+          script.src = DECAP_SRC;
+          script.async = false;
+          document.body.appendChild(script);
+        }
+
+        // Safety timeout
+        setTimeout(function() {
+          if (!window.netlifyIdentity) {
+            warn('Netlify Identity failed to load after ' + IDENTITY_SCRIPT_TIMEOUT_MS + 'ms');
+          }
+        }, IDENTITY_SCRIPT_TIMEOUT_MS);
+
+        init();
+      })();
     </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
