@@ -16,10 +16,9 @@ This repository contains a working skeleton, not a finished production site.
 ### Milestone 2 — Improve CMS workflow
 
 - Deploy to Netlify.
-- Enable Identity and Git Gateway.
-- Invite first admin user.
-- Test creating a new pet from `/admin`.
-- Decide whether editorial workflow is useful or too heavy for volunteers.
+- Connect the repository on Pages CMS.
+- Invite first editor.
+- Test creating a new pet from Pages CMS.
 
 ### Milestone 3 — Real content launch
 

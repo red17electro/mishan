@@ -10,14 +10,14 @@ The current implementation is an MVP foundation:
 - Stable pet profile URLs for QR codes
 - Placeholder PayPal donation page
 - Placeholder volunteer contact page
-- Decap CMS admin configuration for invite-only editors on Netlify
+- Pages CMS configuration for invite-only editors
 - Test pet data and placeholder media
 
 ## Tech stack
 
 - [Astro](https://astro.build/) static site
-- [Decap CMS](https://decapcms.org/) for admin editing
-- Netlify for free hosting, Identity, and Git Gateway
+- [Pages CMS](https://pagescms.org/) for admin editing
+- Netlify for static hosting
 - JSON content files for pets and volunteers
 
 ## Local development
@@ -59,18 +59,15 @@ Keep slugs stable after printing QR codes.
 
 ## Admin CMS
 
-Decap CMS lives at:
+Content is edited through [Pages CMS](https://app.pagescms.org). The site header links to the admin UI.
+
+CMS config lives in:
 
 ```text
-/admin
+.pages.yml
 ```
 
-For production, deploy on Netlify and enable:
-
-1. Netlify Identity
-2. Invite-only registration
-3. Git Gateway
-4. Invited admin users
+For production, connect the GitHub repository on Pages CMS and invite editors there. Netlify rebuilds automatically after content commits.
 
 See [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md).
 

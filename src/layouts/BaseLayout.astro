@@ -42,15 +42,6 @@ function switchPath(targetLang: Language) {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-wght-normal.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-cyrillic-wght-normal.woff2" crossorigin />
-    <script is:inline>
-      (() => {
-        const hash = window.location.hash || '';
-        const hasIdentityToken = hash.includes('invite_token=') || hash.includes('confirmation_token=') || hash.includes('recovery_token=');
-        if (hasIdentityToken) {
-          window.location.replace(`/admin/${hash}`);
-        }
-      })();
-    </script>
   </head>
   <body>
     <header class="site-header">

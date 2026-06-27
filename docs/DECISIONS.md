@@ -6,7 +6,7 @@ Astro is used because Mishan is content-heavy, needs fast static pages, and shou
 
 ## ADR 002 — Use JSON content files
 
-Pets and volunteers are stored as JSON under `src/content/` because Decap CMS can edit JSON forms cleanly and Astro can import the data at build time.
+Pets and volunteers are stored as JSON under `src/content/` because Pages CMS can edit JSON forms cleanly and Astro can import the data at build time.
 
 ## ADR 003 — Use manual bilingual fields
 
@@ -20,6 +20,6 @@ Pet slugs must remain stable after QR codes are printed. Adopted pets should be 
 
 Cloudinary is useful for real media volume, but it is intentionally deferred. The MVP uses local placeholder images to keep the skeleton easy to understand.
 
-## ADR 006 — Netlify + Decap CMS for admin-only editing
+## ADR 006 — Pages CMS for admin-only editing
 
-Netlify Identity and Git Gateway allow multiple invited admins to edit content without direct GitHub repository access.
+Pages CMS connects to GitHub and lets invited editors manage JSON content without direct repository access or a custom backend.

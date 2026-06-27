@@ -34,7 +34,7 @@ Create a simple, maintainable website for Mishan, a Kherson animal shelter, so v
 - Sorting: newest, name, age, size
 - Donation CTA with placeholder PayPal link
 - Volunteer placeholder contacts
-- Admin CMS configuration
+- Pages CMS configuration
 - Test data and placeholder media
 
 ## Deferred features

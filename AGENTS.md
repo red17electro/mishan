@@ -13,8 +13,8 @@ Key goals:
 - Bilingual public site: English (`/en`) and Ukrainian (`/uk`).
 - Pet catalogue with stable pet profile URLs suitable for printed QR codes.
 - Simple donation and volunteer contact pages.
-- Decap CMS admin at `/admin` for invite-only content editing on Netlify.
-- Low-cost/free hosting approach using Netlify static hosting, Netlify Identity, and Git Gateway.
+- Pages CMS for invite-only content editing via GitHub.
+- Low-cost/free hosting approach using Netlify static hosting.
 
 ## Repository and environment
 
@@ -28,7 +28,7 @@ Key goals:
 - Astro static site (`output: 'static'`)
 - TypeScript for content/data types
 - Plain CSS in `src/styles/global.css`
-- Decap CMS config in `public/admin/config.yml`
+- Pages CMS config in `.pages.yml`
 - Netlify deployment config in `netlify.toml`
 - JSON content files for pets and volunteers
 
@@ -63,7 +63,6 @@ http://localhost:4321/en
 http://localhost:4321/uk
 http://localhost:4321/en/pets
 http://localhost:4321/uk/pets
-http://localhost:4321/admin
 ```
 
 To update a private maintainer preview after code/content changes, use the maintainer's out-of-repository infrastructure notes. Do not commit private preview URLs or access details.
@@ -88,7 +87,7 @@ src/lib/data.ts             Content loading and normalization helpers
 src/types.ts                Shared TypeScript types
 src/content/pets/*.json     Pet records
 src/content/volunteers/*.json Volunteer/contact records
-public/admin/               Decap CMS admin shell and config
+.pages.yml                  Pages CMS config
 public/images/              Static images and uploads
 docs/                       Product, deployment, content, and decision docs
 ```
@@ -118,7 +117,6 @@ Important routes:
 /uk/donate         Ukrainian donation page
 /en/volunteers     English volunteer page
 /uk/volunteers     Ukrainian volunteer page
-/admin             Decap CMS admin
 ```
 
 When adding user-visible copy, update both English and Ukrainian unless the task explicitly scopes only one language. Keep translations simple, respectful, and shelter-appropriate.
@@ -149,14 +147,11 @@ Pet detail pages are generated from `slug` at `/en/pets/{slug}` and `/uk/pets/{s
 
 Volunteer records live in `src/content/volunteers/*.json` and are used for public contact routing. Do not expose private contact details unless the corresponding content field is explicitly marked for public display.
 
-## Decap CMS / admin
+## Pages CMS / admin
 
-- Admin entry point: `public/admin/index.html`
-- CMS config: `public/admin/config.yml`
-- Backend: `git-gateway`, branch `main`
-- Local backend is enabled for local CMS development.
-- Production requires Netlify Identity and Git Gateway.
-- `publish_mode: editorial_workflow` is enabled.
+- CMS config: `.pages.yml`
+- Admin UI: [Pages CMS](https://app.pagescms.org) (linked from the site header)
+- Content changes commit to GitHub and trigger a Netlify rebuild
 
 For production setup, see `docs/DEPLOYMENT.md`.
 
@@ -167,8 +162,7 @@ Primary intended production hosting:
 - Netlify static site
 - Build command: `npm run build`
 - Publish directory: `dist`
-- Netlify Identity with invite-only registration
-- Netlify Git Gateway for Decap CMS commits
+- Pages CMS connected to the GitHub repository for content editing
 
 `astro.config.mjs` currently uses a placeholder production site URL:
 
@@ -216,7 +210,7 @@ Before reporting success:
 - `README.md` — short project overview and quickstart.
 - `docs/PRODUCT_SPEC.md` — product goals, users, MVP scope, and acceptance criteria.
 - `docs/CONTENT_GUIDE.md` — content editing guidance for pets, volunteers, photos, and statuses.
-- `docs/DEPLOYMENT.md` — Netlify and Decap CMS deployment steps.
+- `docs/DEPLOYMENT.md` — Netlify and Pages CMS deployment steps.
 - `docs/IMPLEMENTATION_PLAN.md` — implementation phases and backlog.
 - `docs/DECISIONS.md` — architectural/product decisions made so far.
 
@@ -228,5 +222,5 @@ As of the initial skeleton:
 - Placeholder SVG pet images are used.
 - Donation flow is a placeholder and needs final PayPal/payment details.
 - Volunteer/contact data is placeholder content.
-- CMS config exists but production Netlify Identity/Git Gateway still needs to be configured on the deployed site.
+- Pages CMS config exists in `.pages.yml`; connect the repository on [app.pagescms.org](https://app.pagescms.org) for production editing.
 - Any private maintainer preview is not the final public production deployment and should not be documented with access details in this repository.
