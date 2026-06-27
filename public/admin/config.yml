@@ -12,6 +12,43 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "about"
+        label: "About page"
+        file: "src/content/about.json"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Ukrainian", name: "uk", widget: "string" }
+          - label: "Body text"
+            name: "body"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Ukrainian", name: "uk", widget: "text" }
+
+      - name: "volunteers-page"
+        label: "Volunteers page"
+        file: "src/content/volunteers-page.json"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Ukrainian", name: "uk", widget: "string" }
+          - label: "Intro text"
+            name: "body"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Ukrainian", name: "uk", widget: "text" }
+
   - name: "settings"
     label: "Site settings"
     files:

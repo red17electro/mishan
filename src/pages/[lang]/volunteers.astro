@@ -2,15 +2,20 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import VolunteerCard from '@/components/VolunteerCard.astro';
 import { volunteers } from '@/lib/data';
-import { t } from '@/i18n/ui';
+import { localize } from '@/i18n/ui';
 import type { Language } from '@/types';
+import volunteersPageContent from '@/content/volunteers-page.json';
+
 export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }]; }
 const lang = Astro.params.lang as Language;
+
+const title = localize(volunteersPageContent.title, lang);
+const body = localize(volunteersPageContent.body, lang);
 ---
-<BaseLayout title={t(lang, 'volunteersTitle')} lang={lang}>
+<BaseLayout title={title} lang={lang}>
   <section class="section page-intro">
-    <h1>{t(lang, 'volunteersTitle')}</h1>
-    <p>{t(lang, 'volunteersText')}</p>
+    <h1>{title}</h1>
+    <p>{body}</p>
   </section>
   <section class="section section--tight card-grid">
     {volunteers.map((volunteer) => <VolunteerCard volunteer={volunteer} lang={lang} />)}
