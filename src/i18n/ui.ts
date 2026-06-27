@@ -74,6 +74,7 @@ export const ui = {
     language: 'Language',
     navAdmin: 'Admin',
     socialLinksLabel: 'Social media',
+    socialPhoneLabel: 'Phone',
     footerCreditBefore: '© 2026 Built on a volunteer basis',
     footerCreditAfter: ' · München',
     footerCreditName: 'Server Khalilov'
@@ -144,6 +145,7 @@ export const ui = {
     language: 'Мова',
     navAdmin: 'Адмін-панель',
     socialLinksLabel: 'Соціальні мережі',
+    socialPhoneLabel: 'Телефон',
     footerCreditBefore: '© 2026 Створено на волонтерських засадах',
     footerCreditAfter: ' · Мюнхен',
     footerCreditName: 'Сервер Халілов'

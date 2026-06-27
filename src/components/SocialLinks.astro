@@ -1,5 +1,9 @@
 ---
-import { getActiveSocialLinks } from '@/config/socialLinks';
+import {
+  getActiveSocialLinks,
+  isExternalSocialHref,
+  type SocialLink
+} from '@/config/socialLinks';
 import { t } from '@/i18n/ui';
 import type { Language } from '@/types';
 
@@ -10,6 +14,10 @@ interface Props {
 
 const { lang, variant = 'footer' } = Astro.props;
 const activeLinks = getActiveSocialLinks();
+
+function linkLabel(link: SocialLink): string {
+  return link.labelKey ? t(lang, link.labelKey) : link.label;
+}
 ---
 
 {
@@ -19,23 +27,26 @@ const activeLinks = getActiveSocialLinks();
       aria-label={t(lang, 'socialLinksLabel')}
     >
       <ul class="social-links__list">
-        {activeLinks.map((link) => (
-          <li>
-            <a
-              class="social-link"
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-            >
-              <span
-                class="social-link__icon"
-                style={`--social-icon: url(${link.iconPath})`}
-                aria-hidden="true"
-              />
-            </a>
-          </li>
-        ))}
+        {activeLinks.map((link) => {
+          const external = isExternalSocialHref(link.href);
+
+          return (
+            <li>
+              <a
+                class="social-link"
+                href={link.href}
+                {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                aria-label={linkLabel(link)}
+              >
+                <span
+                  class="social-link__icon"
+                  style={`--social-icon: url(${link.iconPath})`}
+                  aria-hidden="true"
+                />
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   )
