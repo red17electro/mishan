@@ -50,10 +50,11 @@ img { max-width: 100%; display: block; }
 .section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0; }
 .section--tight { padding-top: 1rem; }
 .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr); gap: 1.75rem; align-items: center; min-height: 58vh; padding-top: 2.5rem; padding-bottom: 3rem; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.75rem); line-height: 1.05; letter-spacing: -.04em; margin: 0 0 1rem; }
-.page-intro h1 { font-size: clamp(2.4rem, 8vw, 5.5rem); line-height: .95; letter-spacing: -.06em; margin: 0 0 1.5rem; }
-.hero p { font-size: clamp(1rem, 1.75vw, 1.15rem); color: var(--color-muted); max-width: 66ch; }
-.page-intro p, .lead { font-size: clamp(1.05rem, 2vw, 1.3rem); color: var(--color-muted); max-width: 66ch; }
+.hero h1,
+.page-intro h1 { font-size: clamp(2rem, 5vw, 3.75rem); line-height: 1.05; letter-spacing: -.04em; margin: 0 0 1rem; }
+.hero p,
+.page-intro p,
+.lead { font-size: clamp(1rem, 1.75vw, 1.15rem); color: var(--color-muted); max-width: 66ch; }
 .hero .button-row { margin-top: 1.5rem; }
 .hero__card { background: linear-gradient(145deg, #ffe7ad, #d7edf9); border-radius: 36px; padding: 1rem; box-shadow: var(--shadow); transform: rotate(2deg); }
 .hero__card-link { display: block; text-decoration: none; color: inherit; }
@@ -93,7 +94,7 @@ img { max-width: 100%; display: block; }
 .pet-profile__main-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 32px; box-shadow: var(--shadow); background: #f2eadb; }
 .thumbnail-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-top: .75rem; }
 .thumbnail-row img { aspect-ratio: 1; object-fit: cover; border-radius: 18px; }
-.pet-profile__content h1 { font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1; margin: 0 0 1rem; letter-spacing: -.05em; }
+.pet-profile__content h1 { font-size: clamp(2rem, 5vw, 3.75rem); line-height: 1.05; margin: 0 0 1rem; letter-spacing: -.04em; }
 .pet-profile__content h2 { margin-top: 2rem; }
 .fact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .75rem; margin: 0; }
 .fact-grid div { background: white; border-radius: 18px; padding: 1rem; }
