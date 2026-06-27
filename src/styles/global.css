@@ -23,8 +23,9 @@ img { max-width: 100%; display: block; }
 .brand strong, .brand small { display: block; line-height: 1.2; }
 .brand small, .muted { color: var(--color-muted); }
 .main-nav { display: flex; gap: .25rem; flex-wrap: wrap; justify-content: center; }
-.main-nav a, .language-switch a { text-decoration: none; padding: .6rem .75rem; border-radius: 999px; color: var(--color-muted); font-weight: 700; }
-.main-nav a:hover, .language-switch a:hover, .language-switch a.active { background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); }
+.main-nav a, .admin-link, .language-switch a { text-decoration: none; padding: .6rem .75rem; border-radius: 999px; color: var(--color-muted); font-weight: 700; }
+.main-nav a:hover, .admin-link:hover, .language-switch a:hover, .language-switch a.active { background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); }
+.header-actions { display: flex; align-items: center; gap: .25rem; }
 .language-switch { display: flex; gap: .25rem; }
 .section { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; padding: 4rem 0; }
 .section--tight { padding-top: 1rem; }
@@ -77,16 +78,6 @@ img { max-width: 100%; display: block; }
 .contact-list { display: flex; flex-wrap: wrap; gap: .5rem; }
 .contact-list a { border-radius: 999px; background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); padding: .5rem .75rem; text-decoration: none; font-weight: 900; }
 .site-footer { padding: 2rem clamp(1rem, 4vw, 3rem); border-top: 1px solid rgb(36 48 47 / 8%); }
-.admin-landing__primary,
-.admin-landing__links,
-.admin-landing__checklist { margin-top: 2rem; }
-.admin-landing__primary h2,
-.admin-landing__links h2 { margin: 0 0 .75rem; font-size: 1.2rem; letter-spacing: -.02em; }
-.admin-landing__primary p,
-.admin-landing__links p { margin: 0; }
-.admin-landing__hint { margin: .85rem 0 0; font-size: .95rem; }
-.admin-landing__checklist ul { margin: .85rem 0 0; padding-left: 1.25rem; }
-.admin-landing__checklist li + li { margin-top: .45rem; }
 @media (max-width: 800px) {
   .site-header { align-items: flex-start; flex-direction: column; }
   .hero, .pet-profile { grid-template-columns: 1fr; min-height: auto; }
