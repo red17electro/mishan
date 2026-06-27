@@ -9,7 +9,7 @@ const lang = Astro.params.lang as Language;
 
 const title = localize(donateContent.title, lang);
 const body = localize(donateContent.body, lang);
-const bankDetails = localize(donateContent.bank_details, lang);
+const bankDetails = donateContent.bank_details[lang as keyof typeof donateContent.bank_details] ?? '';
 ---
 <BaseLayout title={title} lang={lang}>
   <section class="section page-intro narrow">

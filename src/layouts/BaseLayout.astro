@@ -1,4 +1,5 @@
 ---
+import SocialLinks from '@/components/SocialLinks.astro';
 import type { Language } from '@/types';
 import { languages, t } from '@/i18n/ui';
 import '@/styles/global.css';
@@ -74,6 +75,7 @@ function switchPath(targetLang: Language) {
       <slot />
     </main>
     <footer class="site-footer">
+      <SocialLinks lang={lang} variant="footer" />
       <p class="muted">
         {t(lang, 'footerCreditBefore')} · <a href="https://github.com/red17electro" style="color:inherit">{t(lang, 'footerCreditName')}</a>{t(lang, 'footerCreditAfter')}
       </p>

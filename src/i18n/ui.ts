@@ -73,6 +73,7 @@ export const ui = {
     aboutText: 'Mishan helps homeless animals from Kherson receive care and find safe homes through a volunteer-supported network.',
     language: 'Language',
     navAdmin: 'Admin',
+    socialLinksLabel: 'Social media',
     footerCreditBefore: '© 2026 Built on a volunteer basis',
     footerCreditAfter: ' · München',
     footerCreditName: 'Server Khalilov'
@@ -142,6 +143,7 @@ export const ui = {
     aboutText: '"Мішаня" допомагає безпритульним тваринам з Херсона отримати догляд і знайти безпечний дім через волонтерську мережу.',
     language: 'Мова',
     navAdmin: 'Адмін-панель',
+    socialLinksLabel: 'Соціальні мережі',
     footerCreditBefore: '© 2026 Створено на волонтерських засадах',
     footerCreditAfter: ' · Мюнхен',
     footerCreditName: 'Сервер Халілов'

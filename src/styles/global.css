@@ -98,6 +98,13 @@ img { max-width: 100%; display: block; }
 .contact-list { display: flex; flex-wrap: wrap; gap: .5rem; }
 .contact-list a { border-radius: 999px; background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); padding: .5rem .75rem; text-decoration: none; font-weight: 900; }
 .site-footer { padding: 2rem clamp(1rem, 4vw, 3rem); border-top: 1px solid rgb(36 48 47 / 8%); text-align: center; }
+.social-links { display: block; }
+.social-links__list { display: flex; flex-wrap: wrap; gap: .35rem; justify-content: center; list-style: none; margin: 0; padding: 0; }
+.social-links--footer { margin-bottom: .75rem; color: var(--color-muted); }
+.social-links--inline { margin-top: 1.5rem; color: var(--color-blue-dark); }
+.social-link { display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem; border-radius: 999px; text-decoration: none; transition: background .15s ease, color .15s ease; }
+.social-link:hover, .social-link:focus-visible { background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); outline: none; }
+.social-link__icon { display: block; width: 1.35rem; height: 1.35rem; background-color: currentColor; mask-image: var(--social-icon); mask-size: contain; mask-repeat: no-repeat; mask-position: center; -webkit-mask-image: var(--social-icon); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; -webkit-mask-position: center; }
 @media (max-width: 800px) {
   .site-header { align-items: flex-start; flex-direction: column; }
   .hero, .pet-profile { grid-template-columns: 1fr; min-height: auto; }
