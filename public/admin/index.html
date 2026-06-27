@@ -4,67 +4,165 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mishan CMS</title>
+    <!-- Netlify Identity must load before Decap CMS (https://decapcms.org/docs/choosing-a-backend/). -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script>
       (function () {
         'use strict';
 
         var DECAP_SRC = 'https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js';
+        var IDENTITY_POLL_MS = 50;
         var IDENTITY_SCRIPT_TIMEOUT_MS = 20000;
-        
-        function debug(msg) {
-          console.log('[Mishan CMS Auth] ' + msg);
+        var IDENTITY_INIT_TIMEOUT_MS = 15000;
+
+        var identityReady = false;
+        var cmsStarted = false;
+        var initWatchdog = null;
+
+        function debug() {
+          var args = ['[Mishan CMS Auth]'].concat(Array.prototype.slice.call(arguments));
+          console.log.apply(console, args);
         }
 
-        function warn(msg) {
-          console.warn('[Mishan CMS Auth] ' + msg);
+        function warn() {
+          var args = ['[Mishan CMS Auth]'].concat(Array.prototype.slice.call(arguments));
+          console.warn.apply(console, args);
         }
 
-        // Wait for identity widget to be defined
-        function init() {
-          debug('Checking for window.netlifyIdentity...');
-          if (window.netlifyIdentity) {
-            debug('Found window.netlifyIdentity, binding events...');
-            bindEvents();
-          } else {
-            debug('window.netlifyIdentity not found, polling...');
-            setTimeout(init, 100);
+        function showUserError(message) {
+          if (document.getElementById('cms-auth-error')) {
+            return;
           }
+
+          warn(message);
+          document.body.insertAdjacentHTML(
+            'afterbegin',
+            '<div id="cms-auth-error" role="alert" style="font-family:system-ui,sans-serif;line-height:1.5;padding:1rem 1.25rem;margin:1rem;max-width:36rem;border:1px solid #c62828;border-radius:8px;background:#ffebee;color:#b71c1c;">' +
+              '<strong>CMS sign-in unavailable</strong>' +
+              '<p style="margin:0.5rem 0 0;">' +
+              message +
+              '</p></div>'
+          );
         }
 
-        function bindEvents() {
-          var identity = window.netlifyIdentity;
-          identity.on('init', function(user) {
-            debug('Identity init event fired. User:', user ? user.email : 'null');
-            loadDecap();
-          });
-          
-          identity.on('error', function(err) {
-            warn('Identity error:', err);
-          });
-          
-          // Trigger init check
-          identity.init();
+        function hasIdentityTokenInHash() {
+          var hash = window.location.hash || '';
+          return (
+            hash.indexOf('invite_token=') !== -1 ||
+            hash.indexOf('confirmation_token=') !== -1 ||
+            hash.indexOf('recovery_token=') !== -1
+          );
         }
 
-        function loadDecap() {
-          debug('Injecting Decap CMS script');
+        function loadDecapCms() {
+          if (cmsStarted) {
+            return;
+          }
+          cmsStarted = true;
+          debug('Loading Decap CMS');
+
           var script = document.createElement('script');
           script.src = DECAP_SRC;
           script.async = false;
+          script.onerror = function () {
+            showUserError(
+              'Could not download Decap CMS. Check your network connection and try again.'
+            );
+          };
           document.body.appendChild(script);
         }
 
-        // Safety timeout
-        setTimeout(function() {
-          if (!window.netlifyIdentity) {
-            warn('Netlify Identity failed to load after ' + IDENTITY_SCRIPT_TIMEOUT_MS + 'ms');
+        function onIdentityReady(user) {
+          if (identityReady) {
+            return;
           }
-        }, IDENTITY_SCRIPT_TIMEOUT_MS);
+          identityReady = true;
 
-        init();
+          if (initWatchdog) {
+            clearTimeout(initWatchdog);
+            initWatchdog = null;
+          }
+
+          debug(
+            'Netlify Identity initialized',
+            user ? 'session: ' + (user.email || 'unknown') : 'no active session'
+          );
+
+          if (!user && hasIdentityTokenInHash()) {
+            debug('Email token detected in URL hash; opening Identity modal');
+            window.netlifyIdentity.open();
+          }
+
+          loadDecapCms();
+        }
+
+        function startInitWatchdog() {
+          initWatchdog = setTimeout(function () {
+            if (!identityReady) {
+              showUserError(
+                'Netlify Identity did not finish initializing. Refresh /admin/, allow cookies for this site, and disable content blockers if you are on mobile.'
+              );
+            }
+          }, IDENTITY_INIT_TIMEOUT_MS);
+        }
+
+        function bindIdentityEvents(identity) {
+          identity.on('init', onIdentityReady);
+
+          identity.on('init', function (user) {
+            if (!user) {
+              identity.on('login', function () {
+                debug('Login complete; returning to /admin/');
+                window.location.href = '/admin/';
+              });
+            }
+          });
+
+          identity.on('error', function (err) {
+            var detail =
+              err && (err.msg || err.message) ? String(err.msg || err.message) : 'unknown error';
+            warn('Netlify Identity error:', detail, err);
+            showUserError(
+              'Netlify Identity reported an error (' +
+                detail +
+                '). On mobile, strict cookie or tracker settings can block sign-in. Try refreshing, allowing cookies for this site, or using a desktop browser.'
+            );
+          });
+
+          identity.on('logout', function () {
+            debug('User logged out');
+          });
+
+          startInitWatchdog();
+        }
+
+        function waitForNetlifyIdentity() {
+          var startedAt = Date.now();
+
+          function poll() {
+            if (window.netlifyIdentity) {
+              debug('window.netlifyIdentity is ready');
+              bindIdentityEvents(window.netlifyIdentity);
+              return;
+            }
+
+            if (Date.now() - startedAt >= IDENTITY_SCRIPT_TIMEOUT_MS) {
+              showUserError(
+                'Netlify Identity did not load. Mobile browsers sometimes block third-party scripts or cookies. Refresh the page, allow cookies for this site, disable content blockers, or try again on desktop.'
+              );
+              return;
+            }
+
+            setTimeout(poll, IDENTITY_POLL_MS);
+          }
+
+          poll();
+        }
+
+        debug('Deferring Decap CMS until Netlify Identity is ready');
+        waitForNetlifyIdentity();
       })();
     </script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
