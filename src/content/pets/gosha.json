@@ -1,15 +1,15 @@
 {
-  "slug": "barsik",
+  "slug": "gosha",
   "name": {
-    "en": "Barsik",
-    "uk": "Барсик"
+    "en": "Gosha",
+    "uk": "Гоша"
   },
-  "species": "cat",
+  "species": "dog",
   "sex": "male",
-  "age_group": "adult",
-  "age_value": 4,
-  "age_unit": "years",
-  "size": "small",
+  "age_group": "young",
+  "age_value": 11,
+  "age_unit": "months",
+  "size": "medium",
   "status": "available",
   "location_note": {
     "en": "Kherson region",
@@ -22,7 +22,7 @@
   ],
   "description_short": {
     "en": "A quiet adult cat who loves warm corners and patient people.",
-    "uk": "Спокійний дорослий кіт, який любить теплі місця і терплячих людей."
+    "uk": "Я добрий і лагідний, люблю бігати і гратися, дружу з іншими братиками і сестричками тут, в притулку"
   },
   "description_full": {
     "en": "Barsik is calm and observant. He needs time to adjust, but enjoys attention when he feels safe.",
