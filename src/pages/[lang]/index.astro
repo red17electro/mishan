@@ -1,15 +1,17 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import PetCard from '@/components/PetCard.astro';
-import { pets } from '@/lib/data';
-import { t } from '@/i18n/ui';
+import { heroPet, isAdoptablePet, pets } from '@/lib/data';
+import { localize, t } from '@/i18n/ui';
 import type { Language } from '@/types';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }];
 }
 const lang = Astro.params.lang as Language;
-const featuredPets = pets.filter((pet) => pet.featured).slice(0, 3);
+const featuredPets = pets.filter((pet) => pet.featured && isAdoptablePet(pet)).slice(0, 3);
+const heroPhoto = heroPet?.photos[0] ?? '/images/placeholder-pet.svg';
+const heroAlt = heroPet ? localize(heroPet.name, lang) : 'Mishan shelter pet';
 ---
 <BaseLayout title={t(lang, 'navHome')} lang={lang} description={t(lang, 'heroText')}>
   <section class="hero section">
@@ -23,7 +25,14 @@ const featuredPets = pets.filter((pet) => pet.featured).slice(0, 3);
       </div>
     </div>
     <div class="hero__card">
-      <img src="/images/test-pets/luna.svg" alt="Mishan shelter pet illustration" />
+      {heroPet ? (
+        <a class="hero__card-link" href={`/${lang}/pets/${heroPet.slug}`}>
+          <img src={heroPhoto} alt="" />
+          <span class="hero__pet-name">{localize(heroPet.name, lang)}</span>
+        </a>
+      ) : (
+        <img src={heroPhoto} alt={heroAlt} />
+      )}
     </div>
   </section>
 
