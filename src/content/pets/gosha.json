@@ -1,32 +1,46 @@
 {
-  "slug": "gosha",
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "size": "medium",
+  "photos": [
+    "/images/test-pets/barsik.svg"
+  ],
+  "age_unit": "months",
+  "sex": "male",
+  "created_at": "2026-06-20",
   "name": {
     "en": "Gosha",
     "uk": "Гоша"
   },
-  "species": "dog",
-  "sex": "male",
-  "age_group": "young",
-  "age_value": 11,
-  "age_unit": "months",
-  "size": "medium",
-  "status": "available",
-  "location_note": {
-    "en": "Kherson region",
-    "uk": "Херсонська область"
-  },
+  "slug": "gosha",
+  "featured": true,
   "character_tags": [
     "quiet",
     "independent",
     "soft"
   ],
-  "description_short": {
-    "en": "A quiet adult cat who loves warm corners and patient people.",
-    "uk": "Я добрий і лагідний, люблю бігати і гратися, дружу з іншими братиками і сестричками тут, в притулку"
+  "compatibility": {
+    "children": "unknown",
+    "cats": "yes",
+    "dogs": "unknown"
   },
+  "age_value": 11,
   "description_full": {
     "en": "Barsik is calm and observant. He needs time to adjust, but enjoys attention when he feels safe.",
     "uk": "Барсик спокійний і уважний. Йому потрібен час, щоб звикнути, але коли він почувається безпечно, йому подобається увага."
+  },
+  "status": "available",
+  "updated_at": "2026-06-26",
+  "videos": [],
+  "description_short": {
+    "en": "A quiet dog that is doing everything alright",
+    "uk": "Я добрий і лагідний, люблю бігати і гратися, дружу з іншими братиками і сестричками тут, в притулку"
+  },
+  "species": "dog",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
   },
   "health": {
     "sterilized": "yes",
@@ -36,19 +50,5 @@
       "uk": "Невідомо"
     }
   },
-  "compatibility": {
-    "children": "unknown",
-    "cats": "yes",
-    "dogs": "unknown"
-  },
-  "photos": [
-    "/images/test-pets/barsik.svg"
-  ],
-  "videos": [],
-  "contact": {
-    "volunteer_slug": "placeholder-volunteer"
-  },
-  "featured": true,
-  "created_at": "2026-06-20",
-  "updated_at": "2026-06-26"
+  "age_group": "young"
 }
