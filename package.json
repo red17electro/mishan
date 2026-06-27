@@ -13,5 +13,8 @@
     "@astrojs/check": "latest",
     "astro": "latest",
     "typescript": "latest"
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.2.8"
   }
 }
