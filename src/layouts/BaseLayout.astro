@@ -51,10 +51,20 @@ function switchPath(targetLang: Language) {
       <nav class="main-nav" aria-label="Main navigation">
         {nav.map((item) => <a href={item.href}>{item.label}</a>)}
       </nav>
-      <div class="language-switch" aria-label={t(lang, 'language')}>
-        {(Object.keys(languages) as Language[]).map((code) => (
-          <a class={code === lang ? 'active' : ''} href={switchPath(code)}>{code.toUpperCase()}</a>
-        ))}
+      <div class="header-actions">
+        <a
+          class="admin-link"
+          href="https://app.pagescms.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t(lang, 'navAdmin')}
+        </a>
+        <div class="language-switch" aria-label={t(lang, 'language')}>
+          {(Object.keys(languages) as Language[]).map((code) => (
+            <a class={code === lang ? 'active' : ''} href={switchPath(code)}>{code.toUpperCase()}</a>
+          ))}
+        </div>
       </div>
     </header>
     <main>
