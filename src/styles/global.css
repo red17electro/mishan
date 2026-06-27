@@ -97,7 +97,7 @@ img { max-width: 100%; display: block; }
 .fact-grid dd { margin: .2rem 0 0; font-weight: 900; }
 .contact-list { display: flex; flex-wrap: wrap; gap: .5rem; }
 .contact-list a { border-radius: 999px; background: rgb(58 134 184 / 12%); color: var(--color-blue-dark); padding: .5rem .75rem; text-decoration: none; font-weight: 900; }
-.site-footer { padding: 2rem clamp(1rem, 4vw, 3rem); border-top: 1px solid rgb(36 48 47 / 8%); }
+.site-footer { padding: 2rem clamp(1rem, 4vw, 3rem); border-top: 1px solid rgb(36 48 47 / 8%); text-align: center; }
 @media (max-width: 800px) {
   .site-header { align-items: flex-start; flex-direction: column; }
   .hero, .pet-profile { grid-template-columns: 1fr; min-height: auto; }

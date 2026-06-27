@@ -29,7 +29,7 @@ const featuredPets = pets.filter((pet) => pet.featured).slice(0, 3);
 
   <section class="section">
     <div class="section-heading">
-      <p class="eyebrow">Mishan</p>
+      <p class="eyebrow">{t(lang, 'siteName')}</p>
       <h2>{t(lang, 'featuredPets')}</h2>
       <a class="text-link" href={`/${lang}/pets`}>{t(lang, 'allPets')} →</a>
     </div>

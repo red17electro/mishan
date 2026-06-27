@@ -72,7 +72,10 @@ export const ui = {
     aboutTitle: 'About Mishan',
     aboutText: 'Mishan helps homeless animals from Kherson receive care and find safe homes through a volunteer-supported network.',
     language: 'Language',
-    navAdmin: 'Admin'
+    navAdmin: 'Admin',
+    footerCreditBefore: '© 2026 Built on a volunteer basis',
+    footerCreditAfter: ' · München',
+    footerCreditName: 'Server Khalilov'
   },
   uk: {
     siteName: 'Мішаня',
@@ -138,7 +141,10 @@ export const ui = {
     aboutTitle: 'Про нас',
     aboutText: '"Мішаня" допомагає безпритульним тваринам з Херсона отримати догляд і знайти безпечний дім через волонтерську мережу.',
     language: 'Мова',
-    navAdmin: 'Адмін-панель'
+    navAdmin: 'Адмін-панель',
+    footerCreditBefore: '© 2026 Створено на волонтерських засадах',
+    footerCreditAfter: ' · Мюнхен',
+    footerCreditName: 'Сервер Халілов'
   }
 } as const;
 

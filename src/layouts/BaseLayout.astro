@@ -28,7 +28,7 @@ function switchPath(targetLang: Language) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <title>{title} · Mishan</title>
+    <title>{title} · {t(lang, 'siteName')}</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-latin-wght-normal.woff2" crossorigin />
     <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-cyrillic-wght-normal.woff2" crossorigin />
@@ -74,8 +74,9 @@ function switchPath(targetLang: Language) {
       <slot />
     </main>
     <footer class="site-footer">
-      <p><strong>Mishan</strong> · {t(lang, 'tagline')}</p>
-      <p class="muted">© 2026 Built by <a href="https://github.com/red17electro" style="color:inherit">Server Khalilov</a> · München</p>
+      <p class="muted">
+        {t(lang, 'footerCreditBefore')} · <a href="https://github.com/red17electro" style="color:inherit">{t(lang, 'footerCreditName')}</a>{t(lang, 'footerCreditAfter')}
+      </p>
     </footer>
   </body>
 </html>
