@@ -1,0 +1,220 @@
+media:
+  input: public/images/uploads
+  output: /images/uploads
+  rename: safe
+  categories: [image]
+
+content:
+  - name: pets
+    label: Pets
+    type: collection
+    path: src/content/pets
+    format: json
+    filename:
+      template: "{slug}.json"
+      field: create
+    view:
+      fields: [slug, species, status, featured, updated_at]
+      primary: slug
+      sort: [slug, status, updated_at]
+      default:
+        sort: slug
+        order: asc
+    operations:
+      create: true
+      rename: false
+      delete: true
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+        options:
+          minlength: 2
+          maxlength: 80
+      - name: name
+        label: Name
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+            required: true
+          - name: uk
+            label: Ukrainian
+            type: string
+            required: true
+      - name: species
+        label: Species
+        type: select
+        required: true
+        options:
+          values: [dog, cat, other]
+      - name: sex
+        label: Sex
+        type: select
+        required: true
+        options:
+          values: [female, male, unknown]
+      - name: age_group
+        label: Age group
+        type: select
+        required: true
+        options:
+          values: [baby, young, adult, senior]
+      - name: age_value
+        label: Age value
+        type: number
+        required: true
+        options:
+          min: 0
+      - name: age_unit
+        label: Age unit
+        type: select
+        required: true
+        options:
+          values: [months, years]
+      - name: size
+        label: Size
+        type: select
+        required: true
+        options:
+          values: [small, medium, large]
+      - name: status
+        label: Status
+        type: select
+        required: true
+        options:
+          values: [available, reserved, adopted]
+      - name: location_note
+        label: Location note
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+            default: Kherson region
+          - name: uk
+            label: Ukrainian
+            type: string
+            default: Херсонська область
+      - name: character_tags
+        label: Character tags
+        type: string
+        list: true
+        default: []
+      - name: description_short
+        label: Short description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+      - name: description_full
+        label: Full description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+      - name: health
+        label: Health
+        type: object
+        fields:
+          - name: sterilized
+            label: Sterilized
+            type: select
+            options:
+              values: [yes, no, unknown]
+          - name: vaccinated
+            label: Vaccinated
+            type: select
+            options:
+              values: [yes, no, unknown]
+          - name: special_needs
+            label: Special needs
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+                default: None known
+              - name: uk
+                label: Ukrainian
+                type: string
+                default: Невідомо
+      - name: compatibility
+        label: Compatibility
+        type: object
+        fields:
+          - name: children
+            label: Children
+            type: select
+            options:
+              values: [yes, no, unknown]
+          - name: cats
+            label: Cats
+            type: select
+            options:
+              values: [yes, no, unknown]
+          - name: dogs
+            label: Dogs
+            type: select
+            options:
+              values: [yes, no, unknown]
+      - name: photos
+        label: Photos
+        type: image
+        default: []
+        options:
+          multiple: true
+          unique: true
+          categories: [image]
+          rename: safe
+      - name: videos
+        label: Videos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{type}: {url}"
+        fields:
+          - name: type
+            label: Type
+            type: select
+            options:
+              values: [youtube, vimeo, external]
+          - name: url
+            label: URL
+            type: string
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - name: volunteer_slug
+            label: Volunteer slug
+            type: string
+            default: placeholder-volunteer
+      - name: featured
+        label: Featured on homepage
+        type: boolean
+        default: false
+      - name: created_at
+        label: Created at
+        type: date
+        options:
+          time: false
+          format: yyyy-MM-dd
+      - name: updated_at
+        label: Updated at
+        type: date
+        options:
+          time: false
+          format: yyyy-MM-dd
