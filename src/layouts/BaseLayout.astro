@@ -29,7 +29,15 @@ function switchPath(targetLang: Language) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title} · Mishan</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script is:inline>
+      (() => {
+        const hash = window.location.hash || '';
+        const hasIdentityToken = hash.includes('invite_token=') || hash.includes('confirmation_token=') || hash.includes('recovery_token=');
+        if (hasIdentityToken) {
+          window.location.replace(`/admin/${hash}`);
+        }
+      })();
+    </script>
   </head>
   <body>
     <header class="site-header">
@@ -56,20 +64,5 @@ function switchPath(targetLang: Language) {
       <p><strong>Mishan</strong> — {t(lang, 'tagline')}</p>
       <p class="muted">Volunteer-run prototype. Do not publish sensitive shelter locations or unapproved private phone numbers.</p>
     </footer>
-    <script is:inline>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', (user) => {
-          const hash = window.location.hash || '';
-          const hasIdentityToken = hash.includes('invite_token=') || hash.includes('confirmation_token=') || hash.includes('recovery_token=');
-          if (!user && hasIdentityToken) {
-            window.netlifyIdentity.open();
-          }
-        });
-
-        window.netlifyIdentity.on('login', () => {
-          window.location.href = '/admin/';
-        });
-      }
-    </script>
   </body>
 </html>
