@@ -1,0 +1,42 @@
+---
+import { getActiveSocialLinks } from '@/config/socialLinks';
+import { t } from '@/i18n/ui';
+import type { Language } from '@/types';
+
+interface Props {
+  lang: Language;
+  variant?: 'footer' | 'inline';
+}
+
+const { lang, variant = 'footer' } = Astro.props;
+const activeLinks = getActiveSocialLinks();
+---
+
+{
+  activeLinks.length > 0 && (
+    <nav
+      class:list={['social-links', `social-links--${variant}`]}
+      aria-label={t(lang, 'socialLinksLabel')}
+    >
+      <ul class="social-links__list">
+        {activeLinks.map((link) => (
+          <li>
+            <a
+              class="social-link"
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+            >
+              <span
+                class="social-link__icon"
+                style={`--social-icon: url(${link.iconPath})`}
+                aria-hidden="true"
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  )
+}
