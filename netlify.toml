@@ -18,7 +18,3 @@
   to = "/admin/index.html"
   status = 200
 
-[[redirects]]
-  from = "/admin-sveltia/*"
-  to = "/admin-sveltia/index.html"
-  status = 200
