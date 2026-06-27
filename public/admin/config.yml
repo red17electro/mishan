@@ -12,6 +12,33 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
+  - name: "settings"
+    label: "Site settings"
+    files:
+      - name: "donate"
+        label: "Donation page"
+        file: "src/content/donate.json"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Ukrainian", name: "uk", widget: "string" }
+          - label: "Body text"
+            name: "body"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text" }
+              - { label: "Ukrainian", name: "uk", widget: "text" }
+          - { label: "PayPal email", name: "paypal_email", widget: "string" }
+          - label: "Bank details"
+            name: "bank_details"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "text", required: false }
+              - { label: "Ukrainian", name: "uk", widget: "text", required: false }
+
   - name: "pets"
     label: "Pets"
     label_singular: "Pet"

@@ -5,6 +5,46 @@ media:
   categories: [image]
 
 content:
+  - name: donate
+    label: Donation page
+    type: file
+    path: src/content/donate.json
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: uk
+            label: Ukrainian
+            type: string
+      - name: body
+        label: Body text
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+      - name: paypal_email
+        label: PayPal email
+        type: string
+      - name: bank_details
+        label: Bank details
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+
   - name: pets
     label: Pets
     type: collection
@@ -132,12 +172,12 @@ content:
             label: Sterilized
             type: select
             options:
-              values: [yes, no, unknown]
+              values: ["yes", "no", "unknown"]
           - name: vaccinated
             label: Vaccinated
             type: select
             options:
-              values: [yes, no, unknown]
+              values: ["yes", "no", "unknown"]
           - name: special_needs
             label: Special needs
             type: object
@@ -158,17 +198,17 @@ content:
             label: Children
             type: select
             options:
-              values: [yes, no, unknown]
+              values: ["yes", "no", "unknown"]
           - name: cats
             label: Cats
             type: select
             options:
-              values: [yes, no, unknown]
+              values: ["yes", "no", "unknown"]
           - name: dogs
             label: Dogs
             type: select
             options:
-              values: [yes, no, unknown]
+              values: ["yes", "no", "unknown"]
       - name: photos
         label: Photos
         type: image

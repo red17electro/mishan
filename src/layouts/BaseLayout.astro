@@ -9,7 +9,7 @@ interface Props {
   lang: Language;
 }
 
-const { title, description = 'Mishan pet shelter website', lang } = Astro.props;
+const { title, description = 'Mishan animal shelter website', lang } = Astro.props;
 const nav = [
   { href: `/${lang}`, label: t(lang, 'navHome') },
   { href: `/${lang}/pets`, label: t(lang, 'navPets') },
@@ -71,8 +71,8 @@ function switchPath(targetLang: Language) {
       <slot />
     </main>
     <footer class="site-footer">
-      <p><strong>Mishan</strong> — {t(lang, 'tagline')}</p>
-      <p class="muted">Volunteer-run prototype. Do not publish sensitive shelter locations or unapproved private phone numbers.</p>
+      <p><strong>Mishan</strong> · {t(lang, 'tagline')}</p>
+      <p class="muted">© 2026 Built by <a href="https://github.com/red17electro" style="color:inherit">Server Khalilov</a> · München</p>
     </footer>
   </body>
 </html>

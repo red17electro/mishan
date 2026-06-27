@@ -1,16 +1,26 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { t } from '@/i18n/ui';
+import { t, localize } from '@/i18n/ui';
 import type { Language } from '@/types';
+import donateContent from '@/content/donate.json';
+
 export function getStaticPaths() { return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }]; }
 const lang = Astro.params.lang as Language;
+
+const title = localize(donateContent.title, lang);
+const body = localize(donateContent.body, lang);
+const bankDetails = localize(donateContent.bank_details, lang);
 ---
-<BaseLayout title={t(lang, 'donateTitle')} lang={lang}>
+<BaseLayout title={title} lang={lang}>
   <section class="section page-intro narrow">
-    <p class="eyebrow">Mishan</p>
-    <h1>{t(lang, 'donateTitle')}</h1>
-    <p>{t(lang, 'donateText')}</p>
+    <h1>{title}</h1>
+    <p>{body}</p>
+    {bankDetails && <p>{bankDetails}</p>}
     <a class="button button--primary" href="#" aria-disabled="true">{t(lang, 'paypalPlaceholder')}</a>
-    <p class="muted">Поки що ви можете переслати кошти нам на PayPal: bllari.mishan@gmail.com (For now, you can send your donations to our Paypal: bllari.mishan@gmail.com)</p>
+    <p class="muted">
+      {lang === 'uk'
+        ? `Поки що ви можете переслати кошти нам на PayPal: ${donateContent.paypal_email}`
+        : `For now, you can send your donations to our PayPal: ${donateContent.paypal_email}`}
+    </p>
   </section>
 </BaseLayout>

@@ -5,12 +5,12 @@ export const languages: Record<Language, string> = {
   uk: 'Українська'
 };
 
-export const defaultLang: Language = 'en';
+export const defaultLang: Language = 'uk';
 
 export const ui = {
   en: {
     siteName: 'Mishan',
-    tagline: 'Pet Shelter · Kherson',
+    tagline: 'Animal Shelter · Kherson',
     navHome: 'Home',
     navPets: 'Adopt',
     navDonate: 'Donate',
@@ -66,7 +66,7 @@ export const ui = {
     no: 'No',
     donateTitle: 'Support Mishan',
     donateText: 'Your donation helps provide food, medicine, shelter, and emergency care for animals in Kherson.',
-    paypalPlaceholder: 'PayPal link placeholder',
+    paypalPlaceholder: 'PayPal — coming soon',
     volunteersTitle: 'Volunteer contacts',
     volunteersText: 'Contact details are placeholders until volunteers approve what should be public.',
     aboutTitle: 'About Mishan',
