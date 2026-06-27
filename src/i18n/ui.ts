@@ -71,7 +71,23 @@ export const ui = {
     volunteersText: 'Contact details are placeholders until volunteers approve what should be public.',
     aboutTitle: 'About Mishan',
     aboutText: 'Mishan helps homeless animals from Kherson receive care and find safe homes through a volunteer-supported network.',
-    language: 'Language'
+    language: 'Language',
+    adminEyebrow: 'Mishan Admin',
+    adminTitle: 'Shelter content editor',
+    adminIntro: 'One entry point for volunteers: edit pets in Pages CMS, preview the live catalogue, or use the Decap fallback if needed.',
+    adminPrimaryCtaTitle: 'Primary editor',
+    adminPrimaryCtaText: 'Pages CMS is the main way to create and update pet profiles in Git.',
+    adminEditPets: 'Edit pets in Pages CMS',
+    adminPagesCmsHint: 'At app.pagescms.org, sign in and choose repository red17electro/mishan on branch main.',
+    adminQuickLinks: 'Quick links',
+    adminViewPets: 'View live pets page',
+    adminDecapFallback: 'Decap fallback editor',
+    adminDecapHint: 'Use only if Pages CMS is unavailable. Decap at /admin is a fragile backup and may change later.',
+    adminChecklistTitle: 'Editing checklist',
+    adminChecklistSlug: 'Do not change slugs after QR codes or profile links are shared.',
+    adminChecklistBilingual: 'Update both English and Ukrainian fields.',
+    adminChecklistStatus: 'Use statuses: available, reserved, or adopted.',
+    adminChecklistPublish: 'After saving, wait a few minutes for Netlify to publish changes.'
   },
   uk: {
     siteName: 'Мішаня',
@@ -136,7 +152,23 @@ export const ui = {
     volunteersText: 'Контактні дані поки є тестовими, доки волонтери не підтвердять, що можна публікувати.',
     aboutTitle: 'Про нас',
     aboutText: '"Мішаня" допомагає безпритульним тваринам з Херсона отримати догляд і знайти безпечний дім через волонтерську мережу.',
-    language: 'Мова'
+    language: 'Мова',
+    adminEyebrow: 'Mishan Admin',
+    adminTitle: 'Редактор контенту притулку',
+    adminIntro: 'Єдиний вхід для волонтерів: редагуйте тварин у Pages CMS, переглядайте каталог на сайті або за потреби використовуйте резервний Decap.',
+    adminPrimaryCtaTitle: 'Основний редактор',
+    adminPrimaryCtaText: 'Pages CMS — головний спосіб створювати та оновлювати анкети тварин у Git.',
+    adminEditPets: 'Редагувати тварин у Pages CMS',
+    adminPagesCmsHint: 'На app.pagescms.org увійдіть і оберіть репозиторій red17electro/mishan, гілка main.',
+    adminQuickLinks: 'Швидкі посилання',
+    adminViewPets: 'Переглянути сторінку тварин на сайті',
+    adminDecapFallback: 'Резервний редактор Decap',
+    adminDecapHint: 'Використовуйте лише якщо Pages CMS недоступний. Decap на /admin — крихкий резерв і може змінитися.',
+    adminChecklistTitle: 'Чекліст редагування',
+    adminChecklistSlug: 'Не змінюйте slug після того, як QR-коди або посилання на анкету вже розішли.',
+    adminChecklistBilingual: 'Оновлюйте поля англійською та українською.',
+    adminChecklistStatus: 'Використовуйте статуси: available, reserved або adopted.',
+    adminChecklistPublish: 'Після збереження зачекайте кілька хвилин, поки Netlify опублікує зміни.'
   }
 } as const;
 

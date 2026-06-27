@@ -1,0 +1,59 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { t } from '@/i18n/ui';
+import type { Language } from '@/types';
+
+export function getStaticPaths() {
+  return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }];
+}
+
+const lang = Astro.params.lang as Language;
+const pagesCmsUrl = 'https://app.pagescms.org';
+---
+
+<BaseLayout title={t(lang, 'adminTitle')} description={t(lang, 'adminIntro')} lang={lang}>
+  <section class="section page-intro narrow admin-landing">
+    <p class="eyebrow">{t(lang, 'adminEyebrow')}</p>
+    <h1>{t(lang, 'adminTitle')}</h1>
+    <p class="lead">{t(lang, 'adminIntro')}</p>
+
+    <div class="cta-panel admin-landing__primary">
+      <h2>{t(lang, 'adminPrimaryCtaTitle')}</h2>
+      <p>{t(lang, 'adminPrimaryCtaText')}</p>
+      <div class="button-row">
+        <a
+          class="button button--primary"
+          href={pagesCmsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t(lang, 'adminEditPets')}
+        </a>
+      </div>
+      <p class="muted admin-landing__hint">{t(lang, 'adminPagesCmsHint')}</p>
+    </div>
+
+    <div class="cta-panel admin-landing__links">
+      <h2>{t(lang, 'adminQuickLinks')}</h2>
+      <div class="button-row">
+        <a class="button button--secondary" href={`/${lang}/pets/`}>
+          {t(lang, 'adminViewPets')}
+        </a>
+        <a class="button button--secondary" href="/admin/">
+          {t(lang, 'adminDecapFallback')}
+        </a>
+      </div>
+      <p class="muted admin-landing__hint">{t(lang, 'adminDecapHint')}</p>
+    </div>
+
+    <div class="note-box admin-landing__checklist">
+      <strong>{t(lang, 'adminChecklistTitle')}</strong>
+      <ul>
+        <li>{t(lang, 'adminChecklistSlug')}</li>
+        <li>{t(lang, 'adminChecklistBilingual')}</li>
+        <li>{t(lang, 'adminChecklistStatus')}</li>
+        <li>{t(lang, 'adminChecklistPublish')}</li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
