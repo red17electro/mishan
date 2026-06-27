@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mishan CMS</title>
     <!-- Netlify Identity must load before Decap CMS for the git-gateway backend. -->
-    <script src="/admin/netlify-identity-widget.js"></script>
+    <script src="/admin/netlify-identity-widget.js?v=2026-06-27"></script>
   </head>
   <body>
     <script>
       (function () {
         'use strict';
+
+        var IDENTITY_API_URL = 'https://mishan-kherson.netlify.app/.netlify/identity';
+
+        try {
+          localStorage.removeItem('netlifySiteURL');
+        } catch (error) {
+          // Some mobile browsers can block storage access. Identity can still try the explicit API URL below.
+        }
 
         function hasIdentityTokenInHash() {
           var hash = window.location.hash || '';
@@ -30,6 +38,10 @@
 
           window.netlifyIdentity.on('login', function () {
             window.location.href = '/admin/';
+          });
+
+          window.netlifyIdentity.init({
+            APIUrl: IDENTITY_API_URL,
           });
         }
       })();
