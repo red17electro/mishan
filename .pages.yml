@@ -45,6 +45,152 @@ content:
             label: Ukrainian
             type: text
 
+  - name: about
+    label: About page
+    type: file
+    path: src/content/about.json
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: uk
+            label: Ukrainian
+            type: string
+      - name: body
+        label: Body text
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+
+  - name: volunteers-page
+    label: Volunteers page
+    type: file
+    path: src/content/volunteers-page.json
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+          - name: uk
+            label: Ukrainian
+            type: string
+      - name: body
+        label: Intro text
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+
+  - name: volunteers
+    label: Volunteers
+    type: collection
+    path: src/content/volunteers
+    format: json
+    filename:
+      template: "{slug}.json"
+      field: create
+    view:
+      fields: [slug, name, show_phone_publicly]
+      primary: slug
+      sort: [slug, name]
+      default:
+        sort: name
+        order: asc
+    operations:
+      create: true
+      rename: false
+      delete: true
+    fields:
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern: "^[a-z0-9-]+$"
+        options:
+          minlength: 2
+          maxlength: 80
+      - name: name
+        label: Display name
+        type: string
+        required: true
+      - name: region
+        label: Region
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: string
+            required: true
+          - name: uk
+            label: Ukrainian
+            type: string
+            required: true
+      - name: languages
+        label: Languages spoken
+        type: string
+        list: true
+        default: []
+      - name: role
+        label: Role
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+            required: true
+          - name: uk
+            label: Ukrainian
+            type: text
+            required: true
+      - name: contact_methods
+        label: Contact methods
+        type: object
+        fields:
+          - name: telegram
+            label: Telegram link or username
+            type: string
+          - name: whatsapp
+            label: WhatsApp link
+            type: string
+          - name: email
+            label: Email
+            type: string
+          - name: phone
+            label: Phone (only shown if enabled below)
+            type: string
+      - name: public_contact_note
+        label: Public contact note
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+      - name: show_phone_publicly
+        label: Show phone number publicly
+        type: boolean
+        default: false
+
   - name: pets
     label: Pets
     type: collection
