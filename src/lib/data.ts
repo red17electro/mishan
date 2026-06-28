@@ -1,5 +1,21 @@
 import type { Pet, Volunteer } from '@/types';
 
+export const DEFAULT_PET_PHOTO = '/images/placeholder-pet.svg';
+
+const PLACEHOLDER_PHOTO = /^\/images\/(placeholder-pet\.svg|test-pets\/)/;
+
+export function isPlaceholderPetPhoto(path: string): boolean {
+  return PLACEHOLDER_PHOTO.test(path);
+}
+
+/** Prefer uploaded photos over bundled test placeholders. */
+export function resolvePetPhotos(photos: string[]): string[] {
+  const realPhotos = photos.filter((photo) => !isPlaceholderPetPhoto(photo));
+  if (realPhotos.length > 0) return realPhotos;
+  if (photos.length > 0) return photos;
+  return [DEFAULT_PET_PHOTO];
+}
+
 const petModules = import.meta.glob<Pet>('../content/pets/*.json', { eager: true, import: 'default' });
 const volunteerModules = import.meta.glob<Volunteer>('../content/volunteers/*.json', { eager: true, import: 'default' });
 

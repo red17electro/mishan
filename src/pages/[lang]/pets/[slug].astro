@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { getPet, getVolunteer, pets } from '@/lib/data';
+import { getPet, getVolunteer, pets, resolvePetPhotos } from '@/lib/data';
 import { localize, t } from '@/i18n/ui';
 import type { Language } from '@/types';
 
@@ -11,16 +11,18 @@ const lang = Astro.params.lang as Language;
 const pet = getPet(Astro.params.slug!);
 if (!pet) throw new Error(`Pet not found: ${Astro.params.slug}`);
 const volunteer = getVolunteer(pet.contact.volunteer_slug);
-const mainPhoto = pet.photos[0] ?? '/images/placeholder-pet.svg';
+const [mainPhoto, ...extraPhotos] = resolvePetPhotos(pet.photos);
 const boolLabel = (value: 'yes' | 'no' | 'unknown') => value === 'yes' ? t(lang, 'yes') : value === 'no' ? t(lang, 'no') : t(lang, 'unknown');
 ---
 <BaseLayout title={localize(pet.name, lang)} lang={lang} description={localize(pet.description_short, lang)}>
   <section class="section pet-profile">
     <div class="pet-profile__media">
       <img class="pet-profile__main-image" src={mainPhoto} alt={localize(pet.name, lang)} />
-      <div class="thumbnail-row">
-        {pet.photos.slice(1).map((photo) => <img src={photo} alt={localize(pet.name, lang)} loading="lazy" />)}
-      </div>
+      {extraPhotos.length > 0 && (
+        <div class="thumbnail-row">
+          {extraPhotos.map((photo) => <img src={photo} alt={localize(pet.name, lang)} loading="lazy" />)}
+        </div>
+      )}
     </div>
     <article class="pet-profile__content">
       <p class="eyebrow">{t(lang, pet.species)} · {t(lang, pet.size)} · {t(lang, pet.age_group)}</p>

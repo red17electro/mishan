@@ -1,13 +1,14 @@
 ---
 import type { Language, Pet } from '@/types';
 import { localize, t } from '@/i18n/ui';
+import { resolvePetPhotos } from '@/lib/data';
 
 interface Props {
   pet: Pet;
   lang: Language;
 }
 const { pet, lang } = Astro.props;
-const mainPhoto = pet.photos[0] ?? '/images/placeholder-pet.svg';
+const [mainPhoto] = resolvePetPhotos(pet.photos);
 ---
 <article
   class="pet-card"
