@@ -137,7 +137,7 @@ export const ui = {
     paypalPlaceholder: 'Посилання PayPal буде додано пізніше',
     volunteerContactPending: 'Контактні дані поки є тестовими, доки волонтери не підтвердять, що можна публікувати.',
     language: 'Мова',
-    navAdmin: 'Адмін-панель',
+    navAdmin: 'Адмін',
     socialLinksLabel: 'Соціальні мережі',
     socialPhoneLabel: 'Телефон',
     footerCreditBefore: '© 2026 Створено на волонтерській основі',
