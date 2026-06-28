@@ -39,8 +39,10 @@ const heroAlt = heroPet ? localize(heroPet.name, lang) : 'Mishan shelter pet';
   <section class="section">
     <div class="section-heading">
       <p class="eyebrow">{t(lang, 'siteName')}</p>
-      <h2>{t(lang, 'featuredPets')}</h2>
-      <a class="text-link" href={`/${lang}/pets`}>{t(lang, 'allPets')} →</a>
+      <div class="section-heading__row">
+        <h2>{t(lang, 'featuredPets')}</h2>
+        <a class="text-link" href={`/${lang}/pets`}>{t(lang, 'allPets')} →</a>
+      </div>
     </div>
     <div class="pet-grid">
       {featuredPets.map((pet) => <PetCard pet={pet} lang={lang} />)}
