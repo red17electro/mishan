@@ -53,8 +53,10 @@ const boolLabel = (value: 'yes' | 'no' | 'unknown') => value === 'yes' ? t(lang,
       <div class="cta-panel">
         <h2>{t(lang, 'contactVolunteer')}</h2>
         <p>{volunteer ? `${volunteer.name} — ${localize(volunteer.public_contact_note, lang)}` : t(lang, 'volunteerContactPending')}</p>
-        <a class="button button--primary" href={`/${lang}/volunteers`}>{t(lang, 'contactVolunteer')}</a>
-        <a class="button button--secondary" href={`/${lang}/donate`}>{t(lang, 'donate')}</a>
+        <div class="button-row">
+          <a class="button button--primary" href={`/${lang}/volunteers`}>{t(lang, 'contactVolunteer')}</a>
+          <a class="button button--secondary" href={`/${lang}/donate`}>{t(lang, 'donate')}</a>
+        </div>
       </div>
     </article>
   </section>
