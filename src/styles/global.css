@@ -57,8 +57,8 @@ img { max-width: 100%; display: block; }
 .lead { font-size: clamp(1rem, 1.75vw, 1.15rem); color: var(--color-muted); max-width: 66ch; }
 .hero .button-row { margin-top: 1.5rem; }
 .hero__card { background: linear-gradient(145deg, #ffe7ad, #d7edf9); border-radius: 36px; padding: 1rem; box-shadow: var(--shadow); transform: rotate(2deg); }
-.hero__card-link { display: block; text-decoration: none; color: inherit; }
-.hero__card img { border-radius: 28px; transition: transform .25s ease; }
+.hero__card-link { display: block; text-decoration: none; color: inherit; overflow: hidden; border-radius: 28px; }
+.hero__card img { display: block; width: 100%; max-height: clamp(280px, 48vh, 420px); object-fit: cover; border-radius: 28px; transition: transform .25s ease; }
 .hero__card-link:hover img { transform: scale(1.02); }
 .hero__pet-name { display: block; margin: .85rem 0 0; text-align: center; font-size: clamp(1.35rem, 2.5vw, 1.75rem); font-weight: 900; letter-spacing: -.03em; color: var(--color-blue-dark); }
 .eyebrow { margin: 0 0 .5rem; color: var(--color-blue-dark); text-transform: uppercase; letter-spacing: .12em; font-size: .78rem; font-weight: 900; }
