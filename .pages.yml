@@ -117,7 +117,7 @@ content:
     operations:
       create: true
       rename: false
-      delete: true
+      delete: false
     fields:
       - name: slug
         label: Slug
@@ -209,7 +209,7 @@ content:
     operations:
       create: true
       rename: false
-      delete: true
+      delete: false
     fields:
       - name: slug
         label: Slug

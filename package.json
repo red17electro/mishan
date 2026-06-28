@@ -7,11 +7,14 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "strip-uploads": "node scripts/strip-upload-metadata.mjs",
+    "check-uploads": "node scripts/strip-upload-metadata.mjs --check"
   },
   "devDependencies": {
     "@astrojs/check": "latest",
     "astro": "latest",
+    "sharp": "^0.34.3",
     "typescript": "latest"
   },
   "dependencies": {

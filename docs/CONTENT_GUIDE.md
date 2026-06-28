@@ -56,7 +56,7 @@ public/images/test-pets/
 For real photos later:
 
 - compress before upload
-- remove EXIF metadata where possible
+- remove EXIF metadata where possible (also run automatically: `npm run strip-uploads`, checked in CI)
 - avoid sensitive backgrounds
 - consider Cloudinary if media volume grows
 
