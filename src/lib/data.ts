@@ -85,11 +85,18 @@ export function isAdoptablePet(pet: Pet): boolean {
   return pet.status !== 'adopted';
 }
 
+export function hasRealPetPhotos(pet: Pet): boolean {
+  return pet.photos.some((photo) => !isPlaceholderPetPhoto(photo));
+}
+
 const adoptablePets = pets.filter(isAdoptablePet);
+const adoptablePetsWithRealPhotos = adoptablePets.filter(hasRealPetPhotos);
 
 /** Picked once per build so all locales share the same hero pet until the next deploy. */
 export const heroPet =
-  adoptablePets.length > 0 ? adoptablePets[Math.floor(Math.random() * adoptablePets.length)] : undefined;
+  adoptablePetsWithRealPhotos.length > 0
+    ? adoptablePetsWithRealPhotos[Math.floor(Math.random() * adoptablePetsWithRealPhotos.length)]
+    : undefined;
 
 export function getPet(slug: string): Pet | undefined {
   return pets.find((pet) => pet.slug === slug);
