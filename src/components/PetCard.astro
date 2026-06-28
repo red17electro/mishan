@@ -28,7 +28,7 @@ const [mainPhoto] = resolvePetPhotos(pet.photos);
   <div class="pet-card__body">
     <p class="eyebrow">{t(lang, pet.species)} · {t(lang, pet.size)} · {t(lang, pet.age_group)}</p>
     <h3>{localize(pet.name, lang)}</h3>
-    <p>{localize(pet.description_short, lang)}</p>
+    <p class="pet-card__excerpt">{localize(pet.description_short, lang)}</p>
     <div class="tag-list">
       {(pet.character_tags ?? []).slice(0, 3).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}
     </div>

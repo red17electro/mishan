@@ -77,6 +77,14 @@ img { max-width: 100%; display: block; }
 .pet-card__image-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
 .pet-card:hover img { transform: scale(1.03); }
 .pet-card__body h3 { font-size: 1.45rem; margin: .2rem 0 .4rem; }
+.pet-card__excerpt {
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+}
 .status-badge { display: inline-flex; width: max-content; border-radius: 999px; padding: .35rem .7rem; font-size: .78rem; font-weight: 900; color: white; }
 .pet-card .status-badge { position: absolute; left: .75rem; top: .75rem; }
 .status-badge--available { background: var(--color-green); }
