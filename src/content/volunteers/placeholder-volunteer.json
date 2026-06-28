@@ -1,24 +1,17 @@
 {
-  "slug": "placeholder-volunteer",
-  "name": "Volunteer Name",
+  "slug": "oleksandusyk",
+  "name": "Олександр Усік / Oleksandr Usyk",
   "region": {
-    "en": "Germany",
-    "uk": "Німеччина"
+    "en": "Ukraine",
+    "uk": "Україна"
   },
   "languages": [
     "Ukrainian",
-    "English",
-    "German"
+    "English"
   ],
   "role": {
     "en": "Adoption questions and international coordination",
     "uk": "Питання щодо адопції та міжнародна координація"
-  },
-  "contact_methods": {
-    "whatsapp": "",
-    "telegram": "",
-    "phone": "",
-    "email": ""
   },
   "public_contact_note": {
     "en": "Contact details will be added later.",
