@@ -15,11 +15,7 @@
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": [
-    "calm",
-    "gentle",
-    "good_with_people"
-  ],
+  "character_tags": "calm\ngentle\ngood_with_people",
   "description_short": {
     "en": "A gentle young dog looking for a calm and loving home.",
     "uk": "Лагідна молода собака шукає спокійний і люблячий дім."

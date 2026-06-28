@@ -55,6 +55,11 @@ export interface Pet {
   updated_at: string;
 }
 
+/** Raw pet JSON from CMS may store character_tags as a newline-separated string. */
+export type PetSource = Omit<Pet, 'character_tags'> & {
+  character_tags?: string | string[];
+};
+
 export interface Volunteer {
   slug: string;
   name: string;

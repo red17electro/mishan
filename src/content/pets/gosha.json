@@ -15,11 +15,7 @@
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": [
-    "Тихий",
-    "Самостійний",
-    "Дружелюбний "
-  ],
+  "character_tags": "Тихий\nСамостійний\nДружелюбний",
   "description_short": {
     "en": "A quiet dog that is doing everything alright",
     "uk": "Я добрий і лагідний, люблю бігати і гратися, дружу з іншими братиками і сестричками тут, в притулку"

@@ -15,11 +15,7 @@
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": [
-    "loyal",
-    "calm",
-    "experienced_owner"
-  ],
+  "character_tags": "loyal\ncalm\nexperienced_owner",
   "description_short": {
     "en": "A loyal senior dog who deserves comfort and safety.",
     "uk": "Вірний старший пес, який заслуговує на комфорт і безпеку."

@@ -287,9 +287,8 @@ content:
             default: Херсонська область
       - name: character_tags
         label: Character tags
-        type: string
-        list: true
-        default: []
+        type: text
+        description: One tag per line (e.g. calm, friendly, good with children).
       - name: description_short
         label: Short description
         type: object

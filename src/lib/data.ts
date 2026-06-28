@@ -1,4 +1,4 @@
-import type { Pet, PetCompatibility, PetHealth, Volunteer } from '@/types';
+import type { Pet, PetCompatibility, PetHealth, PetSource, Volunteer } from '@/types';
 
 export const DEFAULT_PET_PHOTO = '/images/placeholder-pet.svg';
 
@@ -29,10 +29,23 @@ const DEFAULT_HEALTH: PetHealth = {
   special_needs: { en: 'None known', uk: 'Невідомо' },
 };
 
-function normalizePet(pet: Pet): Pet {
+function normalizeCharacterTags(value: PetSource['character_tags']): string[] {
+  if (Array.isArray(value)) {
+    return value.map((tag) => tag.trim()).filter(Boolean);
+  }
+  if (typeof value === 'string') {
+    return value
+      .split(/\r?\n/)
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+  }
+  return [];
+}
+
+function normalizePet(pet: PetSource): Pet {
   return {
     ...pet,
-    character_tags: pet.character_tags ?? [],
+    character_tags: normalizeCharacterTags(pet.character_tags),
     photos: pet.photos ?? [],
     videos: pet.videos ?? [],
     compatibility: pet.compatibility ?? DEFAULT_COMPATIBILITY,
@@ -49,7 +62,7 @@ function normalizePet(pet: Pet): Pet {
   };
 }
 
-const petModules = import.meta.glob<Pet>('../content/pets/*.json', { eager: true, import: 'default' });
+const petModules = import.meta.glob<PetSource>('../content/pets/*.json', { eager: true, import: 'default' });
 const volunteerModules = import.meta.glob<Volunteer>('../content/volunteers/*.json', { eager: true, import: 'default' });
 
 function normalizeVolunteer(volunteer: Volunteer): Volunteer {

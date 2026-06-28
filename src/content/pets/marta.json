@@ -15,11 +15,7 @@
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": [
-    "playful",
-    "friendly",
-    "curious"
-  ],
+  "character_tags": "playful\nfriendly\ncurious",
   "description_short": {
     "en": "A playful puppy; this page stays live for QR-code continuity.",
     "uk": "Грайливе цуценя; ця сторінка лишається доступною для QR-кодів."
