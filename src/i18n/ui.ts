@@ -72,7 +72,7 @@ export const ui = {
     navAdmin: 'Admin',
     socialLinksLabel: 'Social media',
     socialPhoneLabel: 'Phone',
-    footerCreditBefore: '© 2026 Built on a volunteer basis',
+    footerCreditBefore: '© 2026 Created on a volunteer basis',
     footerCreditAfter: ' · München',
     footerCreditName: 'Server Khalilov'
   },
@@ -140,7 +140,7 @@ export const ui = {
     navAdmin: 'Адмін-панель',
     socialLinksLabel: 'Соціальні мережі',
     socialPhoneLabel: 'Телефон',
-    footerCreditBefore: '© 2026 Створено на волонтерських засадах',
+    footerCreditBefore: '© 2026 Створено на волонтерській основі',
     footerCreditAfter: ' · Мюнхен',
     footerCreditName: 'Сервер Халілов'
   }
