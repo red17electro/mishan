@@ -61,7 +61,7 @@ export interface Volunteer {
   region: LocalizedString;
   languages: string[];
   role: LocalizedString;
-  contact_methods: {
+  contact_methods?: {
     whatsapp?: string;
     telegram?: string;
     phone?: string;

@@ -3,16 +3,17 @@ import type { Language, Volunteer } from '@/types';
 import { localize } from '@/i18n/ui';
 interface Props { volunteer: Volunteer; lang: Language; }
 const { volunteer, lang } = Astro.props;
+const contact = volunteer.contact_methods ?? {};
 ---
 <article class="volunteer-card">
   <h3>{volunteer.name}</h3>
-  <p class="eyebrow">{localize(volunteer.region, lang)} · {volunteer.languages.join(', ')}</p>
+  <p class="eyebrow">{localize(volunteer.region, lang)} · {(volunteer.languages ?? []).join(', ')}</p>
   <p>{localize(volunteer.role, lang)}</p>
   <p class="muted">{localize(volunteer.public_contact_note, lang)}</p>
   <div class="contact-list">
-    {volunteer.contact_methods.telegram && <a href={volunteer.contact_methods.telegram}>Telegram</a>}
-    {volunteer.contact_methods.whatsapp && <a href={volunteer.contact_methods.whatsapp}>WhatsApp</a>}
-    {volunteer.contact_methods.email && <a href={`mailto:${volunteer.contact_methods.email}`}>Email</a>}
-    {volunteer.show_phone_publicly && volunteer.contact_methods.phone && <a href={`tel:${volunteer.contact_methods.phone}`}>{volunteer.contact_methods.phone}</a>}
+    {contact.telegram && <a href={contact.telegram}>Telegram</a>}
+    {contact.whatsapp && <a href={contact.whatsapp}>WhatsApp</a>}
+    {contact.email && <a href={`mailto:${contact.email}`}>Email</a>}
+    {volunteer.show_phone_publicly && contact.phone && <a href={`tel:${contact.phone}`}>{contact.phone}</a>}
   </div>
 </article>

@@ -19,8 +19,19 @@ export function resolvePetPhotos(photos: string[]): string[] {
 const petModules = import.meta.glob<Pet>('../content/pets/*.json', { eager: true, import: 'default' });
 const volunteerModules = import.meta.glob<Volunteer>('../content/volunteers/*.json', { eager: true, import: 'default' });
 
+function normalizeVolunteer(volunteer: Volunteer): Volunteer {
+  return {
+    ...volunteer,
+    languages: volunteer.languages ?? [],
+    contact_methods: volunteer.contact_methods ?? {},
+    show_phone_publicly: volunteer.show_phone_publicly ?? false,
+  };
+}
+
 export const pets = Object.values(petModules).sort((a, b) => b.created_at.localeCompare(a.created_at));
-export const volunteers = Object.values(volunteerModules).sort((a, b) => a.name.localeCompare(b.name));
+export const volunteers = Object.values(volunteerModules)
+  .map(normalizeVolunteer)
+  .sort((a, b) => a.name.localeCompare(b.name));
 
 export function isAdoptablePet(pet: Pet): boolean {
   return pet.status !== 'adopted';
