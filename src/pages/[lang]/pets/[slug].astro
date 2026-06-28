@@ -29,7 +29,7 @@ const boolLabel = (value: 'yes' | 'no' | 'unknown') => value === 'yes' ? t(lang,
       <h1>{localize(pet.name, lang)}</h1>
       <span class={`status-badge status-badge--${pet.status}`}>{t(lang, pet.status)}</span>
       <p class="lead">{localize(pet.description_short, lang)}</p>
-      <div class="tag-list">{pet.character_tags.map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}</div>
+      <div class="tag-list">{(pet.character_tags ?? []).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}</div>
       <h2>{t(lang, 'aboutPet')}</h2>
       <p>{localize(pet.description_full, lang)}</p>
       <dl class="fact-grid">

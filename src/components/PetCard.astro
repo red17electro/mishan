@@ -30,7 +30,7 @@ const [mainPhoto] = resolvePetPhotos(pet.photos);
     <h3>{localize(pet.name, lang)}</h3>
     <p>{localize(pet.description_short, lang)}</p>
     <div class="tag-list">
-      {pet.character_tags.slice(0, 3).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}
+      {(pet.character_tags ?? []).slice(0, 3).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}
     </div>
     <a class="text-link" href={`/${lang}/pets/${pet.slug}`}>{t(lang, 'viewProfile')} →</a>
   </div>

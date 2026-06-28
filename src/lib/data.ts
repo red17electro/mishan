@@ -1,4 +1,4 @@
-import type { Pet, Volunteer } from '@/types';
+import type { Pet, PetCompatibility, PetHealth, Volunteer } from '@/types';
 
 export const DEFAULT_PET_PHOTO = '/images/placeholder-pet.svg';
 
@@ -9,11 +9,44 @@ export function isPlaceholderPetPhoto(path: string): boolean {
 }
 
 /** Prefer uploaded photos over bundled test placeholders. */
-export function resolvePetPhotos(photos: string[]): string[] {
-  const realPhotos = photos.filter((photo) => !isPlaceholderPetPhoto(photo));
+export function resolvePetPhotos(photos: string[] | undefined): string[] {
+  const list = photos ?? [];
+  const realPhotos = list.filter((photo) => !isPlaceholderPetPhoto(photo));
   if (realPhotos.length > 0) return realPhotos;
-  if (photos.length > 0) return photos;
+  if (list.length > 0) return list;
   return [DEFAULT_PET_PHOTO];
+}
+
+const DEFAULT_COMPATIBILITY: PetCompatibility = {
+  children: 'unknown',
+  cats: 'unknown',
+  dogs: 'unknown',
+};
+
+const DEFAULT_HEALTH: PetHealth = {
+  sterilized: 'unknown',
+  vaccinated: 'unknown',
+  special_needs: { en: 'None known', uk: 'Невідомо' },
+};
+
+function normalizePet(pet: Pet): Pet {
+  return {
+    ...pet,
+    character_tags: pet.character_tags ?? [],
+    photos: pet.photos ?? [],
+    videos: pet.videos ?? [],
+    compatibility: pet.compatibility ?? DEFAULT_COMPATIBILITY,
+    health: {
+      ...DEFAULT_HEALTH,
+      ...pet.health,
+      special_needs: pet.health?.special_needs ?? DEFAULT_HEALTH.special_needs,
+    },
+    description_full: pet.description_full ?? pet.description_short,
+    contact: pet.contact ?? { volunteer_slug: 'placeholder-volunteer' },
+    featured: pet.featured ?? false,
+    created_at: pet.created_at ?? '1970-01-01',
+    updated_at: pet.updated_at ?? pet.created_at ?? '1970-01-01',
+  };
 }
 
 const petModules = import.meta.glob<Pet>('../content/pets/*.json', { eager: true, import: 'default' });
@@ -28,7 +61,9 @@ function normalizeVolunteer(volunteer: Volunteer): Volunteer {
   };
 }
 
-export const pets = Object.values(petModules).sort((a, b) => b.created_at.localeCompare(a.created_at));
+export const pets = Object.values(petModules)
+  .map(normalizePet)
+  .sort((a, b) => b.created_at.localeCompare(a.created_at));
 export const volunteers = Object.values(volunteerModules)
   .map(normalizeVolunteer)
   .sort((a, b) => a.name.localeCompare(b.name));
