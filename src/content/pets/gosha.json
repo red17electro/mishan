@@ -42,7 +42,8 @@
     "dogs": "no"
   },
   "photos": [
-    "/images/test-pets/barsik.svg"
+    "/images/test-pets/barsik.svg",
+    "/images/uploads/patroninohmatdyt28april202204.jpg"
   ],
   "contact": {
     "volunteer_slug": "placeholder-volunteer"
