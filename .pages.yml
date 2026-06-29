@@ -31,6 +31,9 @@ content:
           - name: uk
             label: Ukrainian
             type: text
+      - name: paypal_link
+        label: PayPal link
+        type: string
       - name: paypal_email
         label: PayPal email
         type: string

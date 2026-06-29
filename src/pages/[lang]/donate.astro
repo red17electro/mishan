@@ -16,7 +16,7 @@ const bankDetails = donateContent.bank_details[lang as keyof typeof donateConten
     <h1>{title}</h1>
     <p>{body}</p>
     {bankDetails && <p>{bankDetails}</p>}
-    <a class="button button--primary" href="#" aria-disabled="true">{t(lang, 'paypalPlaceholder')}</a>
+    <a class="button button--primary" href={donateContent.paypal_link} target="_blank" rel="noopener noreferrer">{t(lang, 'paypalButton')}</a>
     <p class="muted">
       {lang === 'uk'
         ? `Поки що ви можете переслати кошти нам на PayPal: ${donateContent.paypal_email}`
