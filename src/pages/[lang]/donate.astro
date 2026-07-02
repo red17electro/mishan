@@ -11,7 +11,7 @@ const title = localize(donateContent.title, lang);
 const body = localize(donateContent.body, lang);
 const bankDetails = donateContent.bank_details[lang as keyof typeof donateContent.bank_details] ?? '';
 ---
-<BaseLayout title={title} lang={lang}>
+<BaseLayout title={t(lang, 'donateTitle')} description={t(lang, 'donateText')} lang={lang}>
   <section class="section page-intro narrow">
     <h1>{title}</h1>
     <p>{body}</p>

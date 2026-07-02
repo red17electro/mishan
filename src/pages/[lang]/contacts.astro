@@ -2,7 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import VolunteerCard from '@/components/VolunteerCard.astro';
 import { volunteers } from '@/lib/data';
-import { localize } from '@/i18n/ui';
+import { localize, t } from '@/i18n/ui';
 import type { Language } from '@/types';
 import volunteersPageContent from '@/content/volunteers-page.json';
 
@@ -12,7 +12,7 @@ const lang = Astro.params.lang as Language;
 const title = localize(volunteersPageContent.title, lang);
 const body = localize(volunteersPageContent.body, lang);
 ---
-<BaseLayout title={title} lang={lang}>
+<BaseLayout title={t(lang, 'contactsMetaTitle')} description={body} lang={lang}>
   <section class="section page-intro">
     <h1>{title}</h1>
     <p>{body}</p>

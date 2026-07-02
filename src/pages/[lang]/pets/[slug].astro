@@ -2,6 +2,7 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getPet, getVolunteer, pets, resolvePetPhotos } from '@/lib/data';
 import { localize, t } from '@/i18n/ui';
+import { absoluteUrl, breadcrumbJsonLd, resolveSite } from '@/lib/seo';
 import type { Language } from '@/types';
 
 export function getStaticPaths() {
@@ -13,20 +14,29 @@ if (!pet) throw new Error(`Pet not found: ${Astro.params.slug}`);
 const volunteer = getVolunteer(pet.contact.volunteer_slug);
 const [mainPhoto, ...extraPhotos] = resolvePetPhotos(pet.photos);
 const boolLabel = (value: 'yes' | 'no' | 'unknown') => value === 'yes' ? t(lang, 'yes') : value === 'no' ? t(lang, 'no') : t(lang, 'unknown');
+const site = resolveSite(Astro.site);
+const petName = localize(pet.name, lang);
+const structuredData = [
+  breadcrumbJsonLd([
+    { name: t(lang, 'navHome'), url: absoluteUrl(site, `/${lang}`) },
+    { name: t(lang, 'allPets'), url: absoluteUrl(site, `/${lang}/pets`) },
+    { name: petName, url: absoluteUrl(site, `/${lang}/pets/${pet.slug}`) }
+  ])
+];
 ---
-<BaseLayout title={localize(pet.name, lang)} lang={lang} description={localize(pet.description_short, lang)}>
+<BaseLayout title={petName} lang={lang} description={localize(pet.description_short, lang)} image={mainPhoto} structuredData={structuredData}>
   <section class="section pet-profile">
     <div class="pet-profile__media">
-      <img class="pet-profile__main-image" src={mainPhoto} alt={localize(pet.name, lang)} />
+      <img class="pet-profile__main-image" src={mainPhoto} alt={petName} loading="eager" decoding="async" />
       {extraPhotos.length > 0 && (
         <div class="thumbnail-row">
-          {extraPhotos.map((photo) => <img src={photo} alt={localize(pet.name, lang)} loading="lazy" />)}
+          {extraPhotos.map((photo) => <img src={photo} alt={petName} loading="lazy" decoding="async" />)}
         </div>
       )}
     </div>
     <article class="pet-profile__content">
       <p class="eyebrow">{t(lang, pet.species)} · {t(lang, pet.size)} · {t(lang, pet.age_group)}</p>
-      <h1>{localize(pet.name, lang)}</h1>
+      <h1>{petName}</h1>
       <span class={`status-badge status-badge--${pet.status}`}>{t(lang, pet.status)}</span>
       <p class="lead">{localize(pet.description_short, lang)}</p>
       <div class="tag-list">{(pet.character_tags ?? []).map((tag) => <span>{tag.replaceAll('_', ' ')}</span>)}</div>

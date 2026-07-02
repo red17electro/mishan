@@ -22,7 +22,7 @@ const [mainPhoto] = resolvePetPhotos(pet.photos);
   data-age-value={pet.age_value}
 >
   <a href={`/${lang}/pets/${pet.slug}`} class="pet-card__image-wrap">
-    <img src={mainPhoto} alt={localize(pet.name, lang)} loading="lazy" />
+    <img src={mainPhoto} alt={localize(pet.name, lang)} loading="lazy" decoding="async" />
     <span class={`status-badge status-badge--${pet.status}`}>{t(lang, pet.status)}</span>
   </a>
   <div class="pet-card__body">

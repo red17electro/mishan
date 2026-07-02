@@ -3,14 +3,22 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PetCatalog from '@/components/PetCatalog.astro';
 import { pets } from '@/lib/data';
 import { t } from '@/i18n/ui';
+import { absoluteUrl, breadcrumbJsonLd, resolveSite } from '@/lib/seo';
 import type { Language } from '@/types';
 
 export function getStaticPaths() {
   return [{ params: { lang: 'en' } }, { params: { lang: 'uk' } }];
 }
 const lang = Astro.params.lang as Language;
+const site = resolveSite(Astro.site);
+const structuredData = [
+  breadcrumbJsonLd([
+    { name: t(lang, 'navHome'), url: absoluteUrl(site, `/${lang}`) },
+    { name: t(lang, 'allPets'), url: absoluteUrl(site, `/${lang}/pets`) }
+  ])
+];
 ---
-<BaseLayout title={t(lang, 'allPets')} lang={lang}>
+<BaseLayout title={t(lang, 'petsMetaTitle')} description={t(lang, 'petsMetaDescription')} lang={lang} structuredData={structuredData}>
   <section class="section page-intro">
     <h1>{t(lang, 'allPets')}</h1>
     <p>{t(lang, 'heroText')}</p>

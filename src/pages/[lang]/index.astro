@@ -3,6 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import PetCard from '@/components/PetCard.astro';
 import { DEFAULT_PET_PHOTO, heroPet, isAdoptablePet, pets, resolvePetPhotos } from '@/lib/data';
 import { localize, t } from '@/i18n/ui';
+import { getAnimalShelterStructuredData, resolveSite } from '@/lib/seo';
 import type { Language } from '@/types';
 
 export function getStaticPaths() {
@@ -12,8 +13,9 @@ const lang = Astro.params.lang as Language;
 const featuredPets = pets.filter((pet) => pet.featured && isAdoptablePet(pet)).slice(0, 3);
 const heroPhoto = heroPet ? resolvePetPhotos(heroPet.photos)[0] : DEFAULT_PET_PHOTO;
 const heroAlt = heroPet ? localize(heroPet.name, lang) : 'Mishan shelter pet';
+const structuredData = [getAnimalShelterStructuredData(lang, resolveSite(Astro.site))];
 ---
-<BaseLayout title={t(lang, 'navHome')} lang={lang} description={t(lang, 'heroText')}>
+<BaseLayout title={t(lang, 'homeMetaTitle')} lang={lang} description={t(lang, 'heroText')} structuredData={structuredData}>
   <section class="hero section">
     <div class="hero__content">
       <p class="eyebrow">{t(lang, 'tagline')}</p>
@@ -27,11 +29,11 @@ const heroAlt = heroPet ? localize(heroPet.name, lang) : 'Mishan shelter pet';
     <div class="hero__card">
       {heroPet ? (
         <a class="hero__card-link" href={`/${lang}/pets/${heroPet.slug}`}>
-          <img src={heroPhoto} alt="" />
+          <img src={heroPhoto} alt="" loading="eager" decoding="async" />
           <span class="hero__pet-name">{localize(heroPet.name, lang)}</span>
         </a>
       ) : (
-        <img src={heroPhoto} alt={heroAlt} />
+        <img src={heroPhoto} alt={heroAlt} loading="eager" decoding="async" />
       )}
     </div>
   </section>
