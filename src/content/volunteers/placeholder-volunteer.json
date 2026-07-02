@@ -7,7 +7,8 @@
   },
   "languages": [
     "ukrainian",
-    "english"
+    "english",
+    "russian"
   ],
   "role": {
     "en": "Adoption questions and international coordination",
@@ -17,7 +18,6 @@
     "en": "Hello, my name is Oleksandra. I have adopted two beautiful dogs from shelter Mishan and will be happy to share my personal experience with you. Please feel free to reach out if you have questions.",
     "uk": "Привіт, мене звати Олександра. Я адоптувала двох прекрасних собак із притулку \"Мішаня\" і буду рада поділитися з вами своїм особистим досвідом. Будь ласка, звертайтеся, якщо у вас є запитання."
   },
-  "photos": [],
   "public_contact_note": {
     "en": "Contact details will be added later.",
     "uk": "Контактні дані буде додано пізніше."
