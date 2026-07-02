@@ -24,7 +24,7 @@ Create a simple, maintainable website for Mishan, a Kherson animal shelter, so v
 | `/en/pets`, `/uk/pets` | Pet catalog |
 | `/en/pets/:slug`, `/uk/pets/:slug` | Pet profile pages |
 | `/en/donate`, `/uk/donate` | Donation page |
-| `/en/volunteers`, `/uk/volunteers` | Volunteer contacts |
+| `/en/contacts`, `/uk/contacts` | Contacts in Europe |
 | `/en/about`, `/uk/about` | Shelter story |
 
 ## MVP features

@@ -4,6 +4,7 @@ export type Sex = 'female' | 'male' | 'unknown';
 export type AgeGroup = 'baby' | 'young' | 'adult' | 'senior';
 export type PetSize = 'small' | 'medium' | 'large';
 export type AdoptionStatus = 'available' | 'reserved' | 'adopted';
+export type VolunteerLanguage = 'ukrainian' | 'english' | 'german' | 'polish' | 'russian';
 
 export interface LocalizedString {
   en: string;
@@ -64,8 +65,10 @@ export interface Volunteer {
   slug: string;
   name: string;
   region: LocalizedString;
-  languages: string[];
+  languages: VolunteerLanguage[];
   role: LocalizedString;
+  description: LocalizedString;
+  photos: string[];
   contact_methods?: {
     whatsapp?: string;
     telegram?: string;
@@ -75,3 +78,9 @@ export interface Volunteer {
   public_contact_note: LocalizedString;
   show_phone_publicly: boolean;
 }
+
+export type VolunteerSource = Omit<Volunteer, 'languages' | 'description' | 'photos'> & {
+  languages?: string[];
+  description?: LocalizedString;
+  photos?: string[];
+};

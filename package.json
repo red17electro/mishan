@@ -8,6 +8,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "check": "astro check",
+    "test": "vitest run",
     "strip-uploads": "node scripts/strip-upload-metadata.mjs",
     "check-uploads": "node scripts/strip-upload-metadata.mjs --check"
   },
@@ -15,7 +16,8 @@
     "@astrojs/check": "latest",
     "astro": "latest",
     "sharp": "^0.34.3",
-    "typescript": "latest"
+    "typescript": "latest",
+    "vitest": "^4.1.9"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8"

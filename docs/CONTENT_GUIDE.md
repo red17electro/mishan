@@ -60,7 +60,7 @@ For real photos later:
 - avoid sensitive backgrounds
 - consider Cloudinary if media volume grows
 
-## Volunteer contact rules
+## Contacts in Europe rules
 
 Default to placeholders until contacts are approved.
 
@@ -71,3 +71,9 @@ Prefer:
 - shared email/contact form
 
 Avoid raw phone numbers unless the volunteer explicitly approves public publication.
+
+Each public contact can include:
+
+- a short English and Ukrainian description
+- one or more approved photos
+- languages spoken, selected from the CMS list

@@ -76,7 +76,7 @@ content:
             type: text
 
   - name: volunteers-page
-    label: Volunteers page
+    label: Contacts in Europe page
     type: file
     path: src/content/volunteers-page.json
     format: json
@@ -103,7 +103,7 @@ content:
             type: text
 
   - name: volunteers
-    label: Volunteers
+    label: Contacts in Europe
     type: collection
     path: src/content/volunteers
     format: json
@@ -148,9 +148,20 @@ content:
             required: true
       - name: languages
         label: Languages spoken
-        type: string
-        list: true
-        default: []
+        type: select
+        options:
+          multiple: true
+          values:
+            - name: ukrainian
+              label: Ukrainian
+            - name: english
+              label: English
+            - name: german
+              label: German
+            - name: polish
+              label: Polish
+            - name: russian
+              label: Russian
       - name: role
         label: Role
         type: object
@@ -163,6 +174,25 @@ content:
             label: Ukrainian
             type: text
             required: true
+      - name: description
+        label: Description
+        type: object
+        fields:
+          - name: en
+            label: English
+            type: text
+          - name: uk
+            label: Ukrainian
+            type: text
+      - name: photos
+        label: Photos
+        type: image
+        default: []
+        options:
+          multiple: true
+          unique: true
+          categories: [image]
+          rename: safe
       - name: contact_methods
         label: Contact methods
         type: object

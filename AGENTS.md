@@ -115,8 +115,8 @@ Important routes:
 /uk/about          Ukrainian about page
 /en/donate         English donation page
 /uk/donate         Ukrainian donation page
-/en/volunteers     English volunteer page
-/uk/volunteers     Ukrainian volunteer page
+/en/contacts       English contacts page
+/uk/contacts       Ukrainian contacts page
 ```
 
 When adding user-visible copy, update both English and Ukrainian unless the task explicitly scopes only one language. Keep translations simple, respectful, and shelter-appropriate.

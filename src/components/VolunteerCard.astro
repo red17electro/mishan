@@ -1,14 +1,23 @@
 ---
 import type { Language, Volunteer } from '@/types';
 import { localize } from '@/i18n/ui';
+import { formatVolunteerLanguages } from '@/lib/volunteers';
 interface Props { volunteer: Volunteer; lang: Language; }
 const { volunteer, lang } = Astro.props;
 const contact = volunteer.contact_methods ?? {};
+const languages = formatVolunteerLanguages(volunteer.languages, lang);
+const description = localize(volunteer.description, lang);
 ---
 <article class="volunteer-card">
+  {volunteer.photos.length > 0 && (
+    <div class="volunteer-card__photos">
+      {volunteer.photos.map((photo) => <img src={photo} alt={volunteer.name} loading="lazy" />)}
+    </div>
+  )}
   <h3>{volunteer.name}</h3>
-  <p class="eyebrow">{localize(volunteer.region, lang)} · {(volunteer.languages ?? []).join(', ')}</p>
+  <p class="eyebrow">{localize(volunteer.region, lang)}{languages && ` · ${languages}`}</p>
   <p>{localize(volunteer.role, lang)}</p>
+  {description && <p>{description}</p>}
   <p class="muted">{localize(volunteer.public_contact_note, lang)}</p>
   <div class="contact-list">
     {contact.telegram && <a href={contact.telegram}>Telegram</a>}
