@@ -102,6 +102,8 @@ img { max-width: 100%; display: block; }
 .catalog-tools select { width: 100%; border: 1px solid rgb(36 48 47 / 16%); border-radius: 14px; padding: .75rem; background: #fff; color: var(--color-text); font: inherit; }
 .empty-state { text-align: center; padding: 2rem; background: white; border-radius: var(--radius); }
 .narrow { max-width: 760px; }
+.shelter-address { display: grid; gap: .25rem; margin-top: 2rem; font-style: normal; }
+.shelter-address span { display: block; }
 .pet-profile { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr); gap: 2rem; align-items: start; }
 .pet-profile__media { position: sticky; top: 96px; }
 .pet-profile__main-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 32px; box-shadow: var(--shadow); background: #f2eadb; }

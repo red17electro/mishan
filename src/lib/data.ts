@@ -1,4 +1,4 @@
-import type { Pet, PetCompatibility, PetHealth, PetSource, VolunteerSource } from '@/types';
+import type { Pet, PetCompatibility, PetHealth, PetSource, Volunteer, VolunteerSource } from '@/types';
 import { normalizeVolunteer } from './volunteers';
 
 export const DEFAULT_PET_PHOTO = '/images/placeholder-pet.svg';

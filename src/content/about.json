@@ -6,5 +6,19 @@
   "body": {
     "en": "Mishan helps homeless animals from Kherson receive care and find safe homes through a volunteer-supported network.",
     "uk": "\"Мішаня\" допомагає безпритульним тваринам з Херсона отримати догляд і знайти безпечний дім через волонтерську мережу."
+  },
+  "address": {
+    "label": {
+      "en": "Shelter address",
+      "uk": "Адреса притулку"
+    },
+    "organization": {
+      "en": "NGO \"Mishanya\"",
+      "uk": "ГО \"Мішаня\""
+    },
+    "street": {
+      "en": "Kherson, 10a Baku St.",
+      "uk": "Херсон, вул. Баку 10а."
+    }
   }
 }

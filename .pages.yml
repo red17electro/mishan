@@ -74,6 +74,40 @@ content:
           - name: uk
             label: Ukrainian
             type: text
+      - name: address
+        label: Shelter address
+        type: object
+        fields:
+          - name: label
+            label: Label
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: uk
+                label: Ukrainian
+                type: string
+          - name: organization
+            label: Organization
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: uk
+                label: Ukrainian
+                type: string
+          - name: street
+            label: Street address
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: uk
+                label: Ukrainian
+                type: string
 
   - name: volunteers-page
     label: Contacts in Europe page

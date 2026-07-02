@@ -9,10 +9,18 @@ const lang = Astro.params.lang as Language;
 
 const title = localize(aboutContent.title, lang);
 const body = localize(aboutContent.body, lang);
+const addressLabel = localize(aboutContent.address.label, lang);
+const addressOrganization = localize(aboutContent.address.organization, lang);
+const addressStreet = localize(aboutContent.address.street, lang);
 ---
 <BaseLayout title={title} lang={lang}>
   <section class="section page-intro narrow">
     <h1>{title}</h1>
     <p>{body}</p>
+    <address class="note-box shelter-address">
+      <strong>{addressLabel}</strong>
+      <span>{addressOrganization}</span>
+      <span>{addressStreet}</span>
+    </address>
   </section>
 </BaseLayout>
