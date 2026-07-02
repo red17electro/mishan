@@ -104,6 +104,18 @@ img { max-width: 100%; display: block; }
 .narrow { max-width: 760px; }
 .shelter-address { display: grid; gap: .25rem; margin-top: 2rem; font-style: normal; }
 .shelter-address span { display: block; }
+.about-team { margin-top: 3rem; }
+.about-team h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); line-height: 1.1; margin: 0 0 1rem; letter-spacing: -.03em; }
+.about-team__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.about-team-card { display: grid; gap: .9rem; background: linear-gradient(145deg, #ffe7ad, #d7edf9); border-radius: 36px; padding: 1rem; text-align: center; }
+.about-team-card:nth-child(odd) { transform: rotate(1deg); }
+.about-team-card:nth-child(even) { transform: rotate(-1deg); }
+.about-team-card__photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); justify-content: center; gap: .75rem; overflow: hidden; border-radius: 28px; }
+.about-team-card__photos img { width: 100%; max-height: clamp(320px, 46vh, 460px); aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; border-radius: 28px; background: #f2eadb; }
+.about-team-card__photos img:only-child { grid-column: 1 / -1; width: min(100%, 320px); justify-self: center; }
+.about-team-card .eyebrow { margin-bottom: .35rem; }
+.about-team-card h3 { margin: 0 0 .35rem; font-size: clamp(1.35rem, 2.5vw, 1.75rem); line-height: 1.2; letter-spacing: -.03em; color: var(--color-blue-dark); }
+.about-team-card a { color: var(--color-blue-dark); font-weight: 900; text-decoration: none; }
 .pet-profile { display: grid; grid-template-columns: minmax(280px, .9fr) minmax(0, 1.1fr); gap: 2rem; align-items: start; }
 .pet-profile__media { position: sticky; top: 96px; }
 .pet-profile__main-image { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 32px; box-shadow: var(--shadow); background: #f2eadb; }
@@ -162,6 +174,8 @@ img { max-width: 100%; display: block; }
   .admin-link,
   .language-switch a { padding: .35rem .5rem; font-size: .72rem; }
   .hero, .pet-profile { grid-template-columns: 1fr; min-height: auto; }
+  .about-team__grid,
+  .about-team-card__photos { grid-template-columns: 1fr; }
   .pet-profile__media { position: static; }
   .section-heading__row { flex-direction: column; align-items: flex-start; gap: .75rem; }
   .section-heading h2 { font-size: clamp(1.75rem, 6.5vw, 2.25rem); line-height: 1.15; }

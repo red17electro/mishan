@@ -20,5 +20,36 @@
       "en": "Kherson, 10a Baku St.",
       "uk": "Херсон, вул. Баку 10а."
     }
+  },
+  "team": {
+    "title": {
+      "en": "Shelter team",
+      "uk": "Команда притулку"
+    },
+    "people": [
+      {
+        "role": {
+          "en": "Administrator",
+          "uk": "Адміністратор"
+        },
+        "name": "Топіха Марина",
+        "phone": "+380668453925",
+        "photos": [
+          "/images/uploads/admin_1.jpeg",
+          "/images/uploads/admin_2.jpeg"
+        ]
+      },
+      {
+        "role": {
+          "en": "Shelter director",
+          "uk": "Директор притулку"
+        },
+        "name": "Старченкова Світлана Іванівна",
+        "phone": "+380995353559",
+        "photos": [
+          "/images/uploads/director.JPG"
+        ]
+      }
+    ]
   }
 }

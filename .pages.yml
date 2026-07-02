@@ -108,6 +108,53 @@ content:
               - name: uk
                 label: Ukrainian
                 type: string
+      - name: team
+        label: Shelter team
+        type: object
+        fields:
+          - name: title
+            label: Title
+            type: object
+            fields:
+              - name: en
+                label: English
+                type: string
+              - name: uk
+                label: Ukrainian
+                type: string
+          - name: people
+            label: People
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{name}"
+            fields:
+              - name: role
+                label: Role
+                type: object
+                fields:
+                  - name: en
+                    label: English
+                    type: string
+                  - name: uk
+                    label: Ukrainian
+                    type: string
+              - name: name
+                label: Name
+                type: string
+              - name: phone
+                label: Phone
+                type: string
+              - name: photos
+                label: Photos
+                type: image
+                default: []
+                options:
+                  multiple: true
+                  unique: true
+                  categories: [image]
+                  rename: safe
 
   - name: volunteers-page
     label: Contacts in Europe page
