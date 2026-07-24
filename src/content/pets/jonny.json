@@ -1,0 +1,52 @@
+{
+  "slug": "jonny",
+  "name": {
+    "en": "Jonny",
+    "uk": "Джоні"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "young",
+  "age_value": 11,
+  "age_unit": "months",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "соціальний \nдружить\nрадіє",
+  "description_short": {
+    "en": "Jonny\nAge: 11 months old | Neutered & fully vaccinated\n\nLeash trained: Walks well on a leash.\n\nJonny is a completely social, happy boy who immediately runs up to greet people. He loves running around, playing, and gets along wonderfully with all dogs (and will do great with cats too!). He is exceptionally kind and friendly to everyone.",
+    "uk": "Джонік (біленький)\n\nВік: 11 місяців | Кастрований та повністю вакцинований\n\nЗнає повідець: Чудово ходить на повідку.\n\nДжонік — абсолютно соціальний, відкритий та радісний хлопчик. Він одразу йде спілкуватися з людиною, любить бігати, гратися та легко знаходить спільну мову з усіма собачками (з котиками теж буде чудово миритись!). Неймовірно добрий і привітний малюк."
+  },
+  "description_full": {
+    "en": "\nJonny — a joyful white ray of light ready to be your best friend 🐾✨\n\nMeet Jonny! This handsome white pup is 11 months old and a complete bundle of happiness and affection.\n\nPersonality: Jonny is an absolute social butterfly! The moment he sees you, he happily trots over to say hello and start making friends. He is full of playful, joyful energy and loves running around and playing games.\n\nFriends with Everyone: Jonny gets along famously with all dogs and is gentle enough to do great with cats, too. He has a heart without a single drop of malice—just pure kindness and friendliness!\n\nSkills & Health: He is leash-trained, fully healthy, neutered, and up-to-date on all his vaccinations.\n\nJonny is looking for an active, loving home where he can shower his family with endless affection and playful energy!",
+    "uk": "Джонік — білосніжне сонечко та справжній генератор радості 🐾✨\n\nЗнайомтеся, це Джонік! Красивий біленький хлопчик віком 11 місяців, який просто випромінює позитив, активність та любов до всього світу.\n\nХарактер: Джонік — душа компанії та справжній екстраверт! Він одразу підбігає знайомитися, щиро радіє кожній людині й одразу готовий ставати найкращими друзями. Це дуже веселий і активний малюк, який надзвичайно любить бігати, гратися та бешкетувати.\n\nДружба з тваринами: Обожнює інших собачок, з усіма дружить і легко знаходить контакт. Завдяки своєму доброму та м'якому характеру він також чудово житиме з котиками.\n\nНавички та здоров'я: Вже добре знає повідець, абсолютно здоровий, кастрований та має всі необхідні щеплення.\n\nДжонік — це суцільна доброта й привітність. Він дуже чекає на активну та люблячу родину, якій подарує море своєї безмежної щирої любові!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "yes",
+    "cats": "yes",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3193.jpeg",
+    "/images/uploads/img3191.jpeg",
+    "/images/uploads/img3194.jpeg",
+    "/images/uploads/img3195.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
