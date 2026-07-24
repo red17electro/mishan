@@ -1,0 +1,51 @@
+{
+  "slug": "aira",
+  "name": {
+    "en": "Aira",
+    "uk": "Айра "
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "young",
+  "age_value": 11,
+  "age_unit": "months",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "ніжна\nобережна\nДопитлива\nЛагідна\nВдячна",
+  "description_short": {
+    "en": "Aira (Black)\n\nAge: 11 months old | Spayed & fully vaccinated\n\nLeash skills: Knows how to walk on a leash.\n\nAira is a sweet, black pup who is a little shy at first. While she won't jump into your arms right away, she is curious and will come over to investigate. With a gentle voice and a little time, her loving side shines through, and she’ll happily play and cuddle! Completely kind and friendly.",
+    "uk": "Айра (чорненька)\n\nВік: 11 місяців | Стерилізована та повністю вакцинована\n\nЗнає повідець: Добре ходить на повідку.\n\nАйра — дуже мила та лагідна дівчинка, але з перших хвилин трохи сором'язлива. Вона не стрибає одразу на голову, хоча їй дуже цікаво познайомитися. Якщо говорити з нею лагідно та дати трішки часу, вона відкриється і з радістю буде гратися та обійматися. Неймовірно добра й привітна."
+  },
+  "description_full": {
+    "en": "Aira — a gentle, tender soul with a heart waiting to bloom 🐾✨\n\nMeet Aira, a gorgeous black pup who is 11 months old. She is Jonny's sister and a wonderfully sweet, gentle girl with a sensitive heart.\n\nPersonality: Aira is a bit shy when meeting new people. She won't jump right up to you in the first few minutes, but her curiosity always wins out as she quietly approaches to check you out. All she needs is a soft, gentle voice and a little bit of patience. Once she feels safe, her true personality blossoms—she will happily play, cuddle, and shower you with affection!\n\nGentle Nature: Like her brother, Aira is completely kind, sweet, and friendly to everyone she meets.\n\nSkills & Health: She walks nicely on a leash, is fully healthy, spayed, and up-to-date on all vaccinations.\n\nAira is waiting for a patient, loving human who will give her the quiet space she needs to open up her sweet, tender heart!",
+    "uk": "Айра — ніжне, трепетне серденько, яке чекає на свою людину 🐾✨\n\nЗнайомтеся, це Айра — витончена чорнява красуня віком 11 місяців. Вона рідна сестричка Джоніка, але має більш тендітну та чутливу натуру.\n\nХарактер: Айра — трохи сором'язлива дівчинка. Під час першого знайомства вона не стрибатиме вам у обійми одразу, але її цікавість завжди перемагає — вона обов'язково підійде роздивитися нову людину. З нею потрібно лише лагідно розмовляти та дати їй трохи часу адаптуватися. Як тільки Айра відчує безпеку, її ніжне серце відкриється: вона з радістю буде спілкуватися, гратися та обійматися!\n\nЛагідна натура: Вона абсолютно добра, дружня та позбавлена будь-якої агресії.\n\nНавички та здоров'я: Добре ходить на повідку, повністю здорова, стерилізована та має всі необхідні щеплення.\n\nАйра дуже чекає на чуйну та терплячу людину, яка подарує їй трохи тепла й допоможе повністю розкрити її прекрасну душу!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3192.jpeg",
+    "/images/uploads/img3195-1.jpeg",
+    "/images/uploads/img3194-1.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
