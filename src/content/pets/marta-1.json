@@ -1,0 +1,53 @@
+{
+  "slug": "marta",
+  "name": {
+    "en": "Marta",
+    "uk": "Марта "
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "adult",
+  "age_value": 6,
+  "age_unit": "years",
+  "size": "large",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "розумна\nдружня\nспокійна\nчудова",
+  "description_short": {
+    "en": "\nMarta\n\nAge: 6 years old | Height: 57 cm | Weight: 20 kg | Spayed & fully vaccinated\n\nLeash skills: Excellent on a leash.\n\nMarta was rescued by the military from the islands. She is a super wonderful, incredibly smart, and friendly dog with an ocean of love and gratitude for people. Overall, Marta is calm, though she still loves to run around and enjoy life! A truly amazing dog",
+    "uk": "Марта \nВік 6 років, зріст 57 см, вага 20 кг. Стерилізована, має всі щеплення, дуууже розумна і дружня до людей, повідець на відмінно.\nМарту врятували військові і забрали її з островів. Вона супер-чудова собака! В ній просто море любові і вдячності до людей. Взагалом Марта спокійна, але побігати і порадіти життю вона теж любить. Собака чудова!"
+  },
+  "description_full": {
+    "en": "Marta — a hero's soul filled with an ocean of love 🐾✨\n\nMeet Marta (Volt's mom), an absolute dream of a dog with a story of resilience and a heart made of pure gold. She is 6 years old, weighs 20 kg, and stands 57 cm tall.\n\nHer Story: Marta was rescued by Ukrainian soldiers who brought her to safety from the islands. Having survived so much, she now carries an endless ocean of love and deepest gratitude toward humans.\n\nPersonality: Marta is incredibly smart, sweet, and friendly to everyone she meets. Overall, she has a calm and wise demeanor, but she still has a youthful spark and loves to run around, play, and celebrate life!\n\nSkills & Health: She walks on a leash like a absolute star (A+ rating!). She is fully healthy, spayed, and up-to-date on all her vaccinations.\n\nMarta is a truly extraordinary dog who is more than ready to shower a warm, loving family with her endless devotion and sweetness!",
+    "uk": "Марта — сміливе серденько з океаном любові та вдячності 🐾✨\n\nЗнайомтеся, це Марта (матуся Вольта) — неймовірна собака з дивовижною долею та золотим характером. Їй 6 років, вона має прекрасний зріст (57 см), важить 20 кг і готова стати найвідданішим другом у світі.\n\nЇї історія: Марту врятували наші військові, вивезши її з небезпечних островів. Переживши стільки випробувань, вона зберегла в собі неймовірне світло та безмежну вдячність до людей.\n\nХарактер: Марта — дуууже розумна, добра та відкрита до кожного. Загалом вона спокійна, виважена та мудра, але при цьому дуже любить життя — із задоволенням побігає, пограється та порадіє кожному новому дню!\n\nНавички та здоров'я: Вона ідеально ходить на повідку — просто на «відмінно»! Повністю здорова, стерилізована та має всі необхідні щеплення.\n\nМарта — це справжній скарб. Вона створена для того, щоб приносити в дім затишок, спокій та безмежну людсько-собачу любов!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3207.jpeg",
+    "/images/uploads/img3204.jpeg",
+    "/images/uploads/img3208.jpeg",
+    "/images/uploads/img3205.jpeg",
+    "/images/uploads/img3206.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
