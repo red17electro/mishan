@@ -1,35 +1,35 @@
 {
   "slug": "luna",
   "name": {
-    "en": "Luna",
-    "uk": "Луна"
+    "en": "Lady",
+    "uk": "Lady"
   },
   "species": "dog",
   "sex": "female",
   "age_group": "young",
-  "age_value": 2,
-  "age_unit": "years",
-  "size": "medium",
+  "age_value": 18,
+  "age_unit": "months",
+  "size": "small",
   "status": "available",
   "location_note": {
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": "calm\ngentle\ngood_with_people",
+  "character_tags": "calm\ngentle, \nsensitive\nshy in the beginning\ngood_with_people",
   "description_short": {
-    "en": "A gentle young dog looking for a calm and loving home.",
-    "uk": "Лагідна молода собака шукає спокійний і люблячий дім."
+    "en": "Lady is shy at first, but very affectionate once she trusts a person. She would do best with patient adopters who can give her stability and routine.",
+    "uk": "Леді \nЗріст 41см, вік 1,5 року. Стерильна, всі щеплення;\nдуже добра і ласкава, трохи сором'язлива спочатку. Ніжна і вразлива.\n"
   },
   "description_full": {
-    "en": "Luna is shy at first, but very affectionate once she trusts a person. She would do best with patient adopters who can give her stability and routine.",
-    "uk": "Спочатку Луна трохи сором’язлива, але коли починає довіряти людині, стає дуже лагідною. Їй підійде терпляча родина, яка подарує стабільність і спокій."
+    "en": "Lady — a gentle ray of sunshine looking for her forever home 🐾✨\n\nThis delicate girl is the true embodiment of love and affection. She is petite in size (only 41 cm tall) and very young — just 1.5 years old.\n\nPersonality: Lady is an incredibly kind, tender, and sensitive soul. At first, she might be a little shy and cautious, but give her a pinch of warmth, and her loving heart will open up to you completely.\n\nHealth: She is fully healthy, spayed, and up-to-date on all her vaccinations.\n\nLady was made to be loved, cherished, and cuddled. She is eagerly waiting for the special person who will give her a sense of safety and cozy comfort!",
+    "uk": "Леді — ніжне сонечко, яке шукає свій дім 🐾✨\n\nЦя тендітна дівчинка — справжня втілення любові та ласки. Вона має мініатюрний зріст (усього 41 см) і зовсім юний вік — їй лише 1,5 року.\n\nХарактер: Леді — неймовірно добра, трепетна й чутлива душа. Спочатку вона може бути трішки сором'язливою та обережною, але варто дати їй дрібку тепла — і її ніжне серце відкриється вам повністю.\n\nЗдоров'я: Дівчинка абсолютно здорова, стерилізована та має всі необхідні щеплення.\n\nЛеді створена для того, щоб її любили, берегли й обіймали. Вона дуже чекає на людину, яка подарує їй відчуття безпеки та затишку!"
   },
   "health": {
-    "sterilized": "unknown",
-    "vaccinated": "unknown",
+    "sterilized": "yes",
+    "vaccinated": "yes",
     "special_needs": {
-      "en": "None known",
-      "uk": "Невідомо"
+      "en": "no",
+      "uk": "Ні"
     }
   },
   "compatibility": {
@@ -38,13 +38,17 @@
     "dogs": "yes"
   },
   "photos": [
-    "/images/test-pets/luna.svg"
+    "/images/test-pets/luna.svg",
+    "/images/uploads/img3228.jpeg",
+    "/images/uploads/img3225.jpeg",
+    "/images/uploads/img3226.jpeg",
+    "/images/uploads/img3222.jpeg",
+    "/images/uploads/img3224.jpeg"
   ],
-  "videos": [],
   "contact": {
     "volunteer_slug": "placeholder-volunteer"
   },
   "featured": true,
-  "created_at": "2026-06-26",
+  "created_at": "2026-07-24",
   "updated_at": "2026-06-26"
 }
