@@ -1,28 +1,28 @@
 {
-  "slug": "marta",
+  "slug": "whiskey",
   "name": {
-    "en": "Marta",
-    "uk": "Марта"
+    "en": "Whiskey",
+    "uk": "Віскі"
   },
   "species": "dog",
-  "sex": "female",
-  "age_group": "baby",
-  "age_value": 7,
+  "sex": "male",
+  "age_group": "young",
+  "age_value": 18,
   "age_unit": "months",
   "size": "small",
-  "status": "adopted",
+  "status": "available",
   "location_note": {
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": "playful\nfriendly\ncurious",
+  "character_tags": "playful\nfriendly\ncurious\nkind\n",
   "description_short": {
-    "en": "A playful puppy; this page stays live for QR-code continuity.",
-    "uk": "Грайливе цуценя; ця сторінка лишається доступною для QR-кодів."
+    "en": "Height: 43 cm | Age: 1.5 years old | Neutered & fully vaccinated\n\nVery kind, affectionate, and playful. Since he grew up in a shelter, he just needs a little time to get used to new things!",
+    "uk": "Віскі\nЗріст 43 см, вік 1,5 роки. Кастрований,  всі щеплення.\nДуже добрий, ласкавий і грайливий, але виріс в притулку.\nТреба трохи часу на пізнання всього нового"
   },
   "description_full": {
-    "en": "Marta is test content for the adopted-pet state. Adopted pet pages should not be deleted because printed QR codes may continue to point here.",
-    "uk": "Марта — тестовий приклад стану «вже вдома». Сторінки адоптованих тварин не слід видаляти, бо надруковані QR-коди можуть і далі вести сюди."
+    "en": "Whiskey— a sweet, playful soul ready to discover the world 🐾✨\n\nWhisky is a handsome, young boy looking for his loving family! He is a perfect medium size (about 43 cm tall) and just 1.5 years old.\n\nPersonality: Whisky is incredibly kind, affectionate, and full of playful joy. Because he grew up in a shelter, everything about the big wide world is still a bit new to him. He just needs a little time, patience, and love to adjust and get used to new experiences.\n\nHealth: Fully healthy, neutered, and up-to-date on all vaccinations.\n\nWhisky is so ready to leave shelter life behind and learn what it means to be a cherished family member!",
+    "uk": "Віскі — солодке, грайливе серденько, готове пізнавати цей світ 🐾✨\n\nВіскі — красивий молодий хлопчик, який дуже шукає свою люблячу родину! Він має ідеальний середній зріст (близько 43 см) і зовсім юний вік — йому лише 1,5 року.\n\nХарактер: Віскі — неймовірно добрий, ласкавий та сповнений грайливої радості. Оскільки він виріс у притулку, великий світ навколо для нього ще новий і незвіданий. Йому просто потрібно трішки часу, терпіння та любові, щоб адаптуватися й звикнути до всього нового.\n\nЗдоров'я: Абсолютно здоровий, кастрований та має всі необхідні щеплення.\n\nВіскі так мріє залишити життя в притулку позаду та дізнатися, як це — бути любимим і бажаним членом родини!"
   },
   "health": {
     "sterilized": "no",
@@ -38,13 +38,16 @@
     "dogs": "yes"
   },
   "photos": [
-    "/images/test-pets/marta.svg"
+    "/images/test-pets/marta.svg",
+    "/images/uploads/img3218.jpeg",
+    "/images/uploads/img3219.jpeg",
+    "/images/uploads/img3220.jpeg",
+    "/images/uploads/img3221.jpeg"
   ],
-  "videos": [],
   "contact": {
     "volunteer_slug": "placeholder-volunteer"
   },
   "featured": false,
-  "created_at": "2026-06-10",
-  "updated_at": "2026-06-26"
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-26"
 }
