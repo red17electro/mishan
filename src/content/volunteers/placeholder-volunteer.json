@@ -18,6 +18,13 @@
     "en": "Hello, my name is Oleksandra. I have adopted two beautiful dogs from shelter Mishan and will be happy to share my personal experience with you. Please feel free to reach out if you have questions.",
     "uk": "Привіт, мене звати Олександра. Я адоптувала двох прекрасних собак із притулку \"Мішаня\" і буду рада поділитися з вами своїм особистим досвідом. Будь ласка, звертайтеся, якщо у вас є запитання."
   },
+  "photos": [
+    "/images/uploads/6.jpg"
+  ],
+  "contact_methods": {
+    "telegram": "@Oleksandra_K_love",
+    "email": "oleksandra00102@gmail.com"
+  },
   "public_contact_note": {
     "en": "Contact details will be added later.",
     "uk": "Контактні дані буде додано пізніше."
