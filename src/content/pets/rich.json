@@ -1,50 +1,52 @@
 {
-  "slug": "rich",
+  "slug": "dick",
   "name": {
-    "en": "Rich",
-    "uk": "Річ"
+    "en": "Dick",
+    "uk": "Дік"
   },
   "species": "dog",
   "sex": "male",
-  "age_group": "senior",
-  "age_value": 8,
+  "age_group": "young",
+  "age_value": 2,
   "age_unit": "years",
   "size": "large",
-  "status": "reserved",
+  "status": "available",
   "location_note": {
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": "loyal\ncalm\nexperienced_owner",
+  "character_tags": "loyal\nJoyful\nSensitie\nActive\nexperienced_owner",
   "description_short": {
-    "en": "A loyal senior dog who deserves comfort and safety.",
-    "uk": "Вірний старший пес, який заслуговує на комфорт і безпеку."
+    "en": "Dick\nAge: 2 years old | Height: 49 cm | Neutered & fully vaccinated\n\nLeash trained: Knows how to walk on a leash.\n\nDick is a very special dog. Even though he is overjoyed to see people and happily runs up to greet everyone the moment he leaves his enclosure, he needs a very gentle and loving touch because he has survived literal hell. He gets along well with other dogs, as long as they are kind and friendly.",
+    "uk": "Дік.\nВік 2 роки, зріст 49 см, кастрований, має всі щеплення, знає повідець.\nДік особлива собака. При тому, що він дуже радіє людям і як тільки його випускають з вольєру, він радісно біжить спілкуватись - з ним треба бути дуже лагідний і люблячим, бо він пережив пекло!\nДружить з собаками, але тільки з добрими."
   },
   "description_full": {
-    "en": "Rich is a steady, older dog. He likes calm walks and familiar people. His future home should be peaceful and predictable.",
-    "uk": "Річ — спокійний старший пес. Він любить тихі прогулянки і знайомих людей. Йому потрібен мирний і передбачуваний дім."
+    "en": "Dick — a resilient, loving heart searching for a safe haven 🐾✨\n\nDick is an extraordinary boy with a bright spirit and a heart that still believes in human kindness. He is 2 years old, stands 49 cm tall, and is ready to start his new, happy chapter.\n\nPersonality: Dick is a truly special soul. The moment he is let out of his enclosure, he practically glows with joy and runs straight to socialize with people! However, because he has survived absolute hell in his past, he needs a family who will treat him with  tenderness, patience, and love.\n\nFriends: He gets along well with other dogs, provided they are gentle and kind-natured just like him.\n\nSkills & Health: He is leash-trained, fully healthy, neutered, and up-to-date on all his vaccinations.\n\nDick has so much love to give despite everything he has been through. He is waiting for a soft, compassionate home where he can finally feel safe, protected, and cherished forever!",
+    "uk": "Дік — хоробре, любляче серденько у пошуках безпечного гавані 🐾✨\n\nДік — дивовижний хлопчик із світлою душею, який, незважаючи ні на що, зберіг віру в людську доброту. Йому 2 роки, він має чудовий зріст (49 см) і повністю готовий розпочати нову, щасливу сторінку свого життя.\n\nХарактер: Дік — неймовірно особлива душа. Як тільки його випускають з вольєру, він буквально сяє від радості та щасливо біжить спілкуватися з людьми! Проте, оскільки у своєму минулому він пережив справжнє пекло, йому потрібна родина, яка поставиться до нього з особливою ніжністю, терпінням та безмежною любов'ю.\n\nДрузі: Він чудово ладнає з іншими собачками, якщо вони такі ж добрі та миролюбні, як і він сам.\n\nНавички та здоров'я: Добре знає повідець, повністю здоровий, кастрований та має всі необхідні щеплення.\n\nДік зберег стільки тепла у своєму серці, незважаючи на все пережите. Він дуже чекає на чуйну людину, поруч із якою зможе нарешті почуватися в повній безпеці, затишку та любові!"
   },
   "health": {
-    "sterilized": "unknown",
-    "vaccinated": "unknown",
+    "sterilized": "yes",
+    "vaccinated": "yes",
     "special_needs": {
-      "en": "Senior care may be needed",
-      "uk": "Може потребувати догляду для старших собак"
+      "en": "Loving, patient, attentive owner ",
+      "uk": "потрібна родина, яка поставиться до нього з особливою ніжністю, терпінням та безмежною любов'ю"
     }
   },
   "compatibility": {
-    "children": "unknown",
+    "children": "no",
     "cats": "unknown",
-    "dogs": "unknown"
+    "dogs": "yes"
   },
   "photos": [
-    "/images/test-pets/rich.svg"
+    "/images/test-pets/rich.svg",
+    "/images/uploads/img3212.jpeg",
+    "/images/uploads/img3210.jpeg",
+    "/images/uploads/img3209.jpeg"
   ],
-  "videos": [],
   "contact": {
     "volunteer_slug": "placeholder-volunteer"
   },
   "featured": true,
-  "created_at": "2026-06-18",
-  "updated_at": "2026-06-26"
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
 }
