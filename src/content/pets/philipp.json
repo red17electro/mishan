@@ -1,0 +1,57 @@
+{
+  "slug": "philipp",
+  "name": {
+    "en": "Philipp",
+    "uk": "Філіпп"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "Розумний\nПривітний\nчутливий\nВихований\nВірний\nЛюблячий\nЛаскавий",
+  "description_short": {
+    "en": "Philipp\n\nAge: 4 years old | Height: 52 cm | Weight: 20 kg | Neutered & fully vaccinated\n\nLeash skills: Excellent on a leash.\n\nPhilipp is a wonderfully kind, smart, and cheerful boy who lights up with joy the second he meets someone new. Rescued after his previous family tragically died in a shelling attack, he misses home deeply and finds life in a shelter enclosure very hard. He loves walks, cuddles, and gets along well with friendly dogs. A loyal boy ready for a quiet home!",
+    "uk": "Філіпп\n\nВік: 4 роки | Зріст: 52 см | Вага: 20 кг | Кастрований та повністю вакцинований\n\nЗнає повідець: Ідеально, на «відмінно».\n\nФіліпп — неймовірно добрий, розумний та веселий хлопчик, який з перших секунд радіє кожній людині. Був домашнім улюбленцем, але його хазяїва загинули під час обстрілу. Філіпп сильно сумує у тісному вольєрі притулку. Обожнює прогулянки, увагу, ласку та дружить з добрими собачками."
+  },
+  "description_full": {
+    "en": "Philipp — a resilient, loving heart desperately longing for the warmth of a home 🐾✨\n\nMeet Philipp, an extraordinary boy with a gentle spirit, a quick mind, and so much devotion to give. He is 4 years old, stands 52 cm tall, and weighs 20 kg.\n\nPersonality: Philipp is pure friendliness! From the very first second of meeting anyone, he glows with happiness. He is intelligent, upbeat, and adores walks, human attention, and gentle affection.\n\nFriends & Nature: He gets along great with other dogs as long as they are kind and sweet-natured like him.\n\nHis Heartbreaking Story: Philipp was once a cherished family pet, but his world was shattered when his owners tragically died during shelling. Because he knows what it means to be a beloved house dog, he misses that life deeply and gets extremely sad waiting inside a shelter enclosure.\n\nSkills & Health: He walks like an absolute champion on a leash (A+ rating!), is fully healthy, neutered, and up-to-date on all his vaccinations.\n\nPhilipp is waiting for a compassionate person to take him out of the shelter and give him back the happy home life he so deeply deserves!",
+    "uk": "Філіпп — розумне, віддане серденько, яке понад усе мріє знову стати домашнім 🐾✨\n\nЗнайомтеся, це Філіпп — прекрасний хлопчик із щирою душею та розумними очима. Йому 4 роки, він має гарний зріст (52 см) та важить 20 кг.\n\nХарактер: Філіпп — це суцільне тепло та доброта! З перших же секунд знайомства він щиро радіє кожній людині. Це дуже розумний, життєрадісний та компанійський хлопчик, який понад усе любить активні прогулянки, людську увагу, ніжність та ласку.\n\nДружелюбність: Чудово ладнає та дружить з іншими собачками, якщо вони такі ж добрі та миролюбні, як і він сам.\n\nЙого трагічна історія: Філіпп виріс у люблячій родині й був домашнім собакою, але його хазяїва загинули під час обстрілу... Переживши таке лихо, він опинився в притулку. Через те, що він знає затишок рідного дому, Філіпп неймовірно сильно сумує, сидячи у вольєрі, та з надією чекає на порятунок.\n\nНавички та здоров'я: Ходить на повідку просто на «відмінно», повністю здоровий, кастрований та має всі необхідні щеплення.\n\nФіліпп дуже чекає на турботливу людину, яка подарує йому новий дім!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3181.jpeg",
+    "/images/uploads/img3182.jpeg",
+    "/images/uploads/img3179.jpeg",
+    "/images/uploads/img3185-1.jpeg",
+    "/images/uploads/img3183.jpeg",
+    "/images/uploads/img3184.jpeg",
+    "/images/uploads/img3178.jpeg",
+    "/images/uploads/img3186.jpeg",
+    "/images/uploads/img3180.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
