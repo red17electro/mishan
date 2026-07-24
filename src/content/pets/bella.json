@@ -1,0 +1,52 @@
+{
+  "slug": "bella",
+  "name": {
+    "en": "Bella",
+    "uk": "Белла "
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "активна\nкомпанійська\nвесела\nЛюбляча\nЖиттєрадісна",
+  "description_short": {
+    "en": "Bella\n\nAge: 4 years old | Height: 57 cm | Weight: 20 kg | Spayed & fully vaccinated\n\nLeash skills: Excellent on a leash.\n\nBella adores people with all her heart! She runs up to greet everyone with childlike joy, hoping each visitor is the one coming to take her home. Active, fun-loving, and great with other dogs, she was rescued from the street after her owner passed away and has been waiting in a shelter for 1.5 years. Note: She limps slightly on one leg after a long run due to an old injury, but it doesn't stop her love for life!",
+    "uk": "Белла\n\nВік: 4 роки | Зріст: 57 см | Вага: 20 кг | Стерилізована та повністю вакцинована\n\nЗнає повідець: Ідеально, на «відмінно».\n\nБелла любить людей до нестями! Вона одразу біжить знайомитися й радіє, наче дитина. Після смерті хазяйки вона опинилася на вулиці, але її врятували, і ось уже 1,5 року вона чекає на нову родину в притулку. Белла дуже активна, компанійська та дружня до інших собак. Через давню травму може трохи шкутильгати на лапку після довгого бігу, але це не заважає їй бути найвеселішим другом!"
+  },
+  "description_full": {
+    "en": "Bella — an endlessly devoted heart waiting for her second chance at happiness 🐾✨\n\nMeet Bella, a gorgeous, affectionate girl with a heart of gold. She is 4 years old, stands 57 cm tall, and weighs 20 kg.\n\nPersonality: Bella loves people beyond words! Every time someone visits the shelter, she rushes over with pure, childlike joy, hoping in her heart that they are here to take her home. She is a cheerful, active, and outgoing companion who will bring immeasurable warmth to a loving family.\n\nSocial & Playful: She adores running around, playing, and making friends with other dogs.\n\nHer Story: After her original owner sadly passed away, Bella found herself abandoned on the street before being rescued. She has now been patiently waiting in the shelter for 1.5 years. Because of an old injury, she might limp slightly if she runs for a very long time, but her spirits remain as bright as ever!\n\nSkills & Health: She walks on a leash like an absolute pro (A+ rating!), is fully healthy, spayed, and up-to-date on all vaccinations.\n\nBella is more than ready to leave her shelter days behind and become a loyal, loving best friend to someone special!",
+    "uk": "Белла — вірне серденько, яке понад усе мріє знову стати домашньою 🐾✨\n\nЗнайомтеся, це Белла — красива, витончена дівчинка з неймовірно доброю душею. Їй 4 роки, вона має зріст 57 см і важить 20 кг.\n\nХарактер: Белла любить людей просто до нестями! Щоразу, коли в притулок приходять гості, вона першою біжить знайомитися та радіє, мов дитина. У її очах завжди світиться надія, що цього разу прийшли саме по неї. Вона дуже активна, весела, компанійська дівчинка, яка стане найвідданішим другом для доброї людини.\n\nДружелюбність: Обожнює гратися, бігати та спілкуватися з іншими собачками. Через давню травму, якщо вона дуже довго бігає, то може трохи шкутильгати на одну лапку, але її життєлюбству це нітрохи не заважає!\n\nЇї історія: Беллу врятували з вулиці, де вона опинилася після трагічної смерті своєї хазяйки. Вже півтора року ця чудова собака терпляче чекає в притулку на своє нове щастя.\n\nНавички та здоров'я: Вона ходить на повідку просто на «відмінно», повністю здорова, стерилізована та має всі необхідні щеплення.\n\nБелла так прагне подарувати свою безмежну любов людині, яка відкриє для неї двері свого дому та серця!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3190.jpeg",
+    "/images/uploads/img3187.jpeg",
+    "/images/uploads/img3188.jpeg",
+    "/images/uploads/img3189.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
