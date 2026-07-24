@@ -1,0 +1,53 @@
+{
+  "slug": "volt",
+  "name": {
+    "en": "Volt",
+    "uk": "Вольт"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "young",
+  "age_value": 18,
+  "age_unit": "months",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "добрий\nдружній\nвеселий\nактивний\nЛаскавий",
+  "description_short": {
+    "en": "Volt\n\nAge: 1.5 years old | Height: 60 cm | Weight: 18 kg | Neutered & fully vaccinated\n\nVolt is the sweetest, most wonderful boy in the world, but he has been chronically unlucky. While all his sisters found forever homes long ago, Volt’s adoptions have repeatedly fallen through at the last minute. He is completely kind and friendly toward all people and animals, fun-loving, active, and affectionate. He adores active games, walks, running, and spreading joy to everyone around him!",
+    "uk": "Вольт.\nВік 1,5 роки, зріст 60 см, вага 18 кг. Кастрований, має всі щеплення.\nЦе самий добрий і чудовий в світі хлопчик, але йому хронічно не щастить. Всі його сестри вже давно живуть в родинах, а Вольта декілька разів хотіли взяти і щось не виходить в останню мить.\nВін абсолютно добрий і дружній до всіх людей і тварин, веселий, активний і дуже любить активні ігри, прогулянки, бігати і веселитись. Ласкавий і лагідний до людей і до всього живого."
+  },
+  "description_full": {
+    "en": "Volt — the sweetest, most playful boy waiting for his turn at happiness 🐾✨\n\nMeet Volt (Marta's son), a handsome, leggy boy with a heart of pure sunshine! He is just 1.5 years old, weighs 18 kg, stands 60 cm tall, and is eagerly waiting for his dream family.\n\nPersonality: Volt is the absolute sweetest, most wonderful boy you could ever meet. He is an energetic bundle of happiness who loves active games, long walks, running around, and having fun! Volt is completely friendly to everyone—both humans and other animals—and is deeply loving, gentle, and affectionate toward all living creatures.\n\nHis Story: Poor Volt has had a string of bad luck. All of his sisters found their forever homes long ago, and while several people have wanted to adopt Volt, fate kept getting in the way at the very last second. He is so ready for his lucky break!\n\nHealth: Fully healthy, neutered, and up-to-date on all his vaccinations.\n\nVolt has so much love, joy, and playful energy to share. He is just waiting for that special person to finally say, \"You're coming home with me!\"",
+    "uk": "Вольт — найдобріший сонячний хлопчик, який дуже чекає на своє щастя 🐾✨\n\nЗнайомтеся, це Вольт (синочок Марти) — статний, статний красивий хлопчик із золотим серцем! Йому лише 1,5 року, він важить 18 кг, має зріст 60 см і всією душею мріє про свою власну родину.\n\nХарактер: Вольт — це абсолютне втілення доброти та радості. Він надзвичайно веселий, активний та енергійний дзиґа, який обожнює довго гуляти, бігати, гратися та бешкетувати! Вольт неймовірно лагідний, ніжний та дружній абсолютно до всіх — і до людей, і до інших тваринок. У ньому немає ні краплини агресії, тільки чиста любов до всього живого.\n\nЙого історія: Вольтику трохи не щастить... Усі його сестрички вже давно ніжаться на господських диванах у своїх родинах. Вольта теж кілька разів хотіли забрати, але кожного разу в останню мить щось зривалося. Втім, він не втрачає віри!\n\nЗдоров'я: Повністю здоровий, кастрований та має всі необхідні щеплення.\n\nВольт готовий подарувати своєму господарю весь свій мореподібний запас позитиву, відданості та любові. Він дуже чекає на людину, яка нарешті скаже: «Ходімо додому, мій дивовижний хлопчику!»"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3199-1.jpeg",
+    "/images/uploads/img3198-1.jpeg",
+    "/images/uploads/img3200-1.jpeg",
+    "/images/uploads/img3197-1.jpeg",
+    "/images/uploads/img3196-1.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
+}
