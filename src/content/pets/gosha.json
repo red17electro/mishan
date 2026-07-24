@@ -1,50 +1,53 @@
 {
-  "slug": "patron",
+  "slug": "margosha",
   "name": {
-    "en": "Patron",
-    "uk": "Патрон"
+    "en": "Margosha",
+    "uk": "Маргоша"
   },
   "species": "dog",
-  "sex": "male",
-  "age_group": "adult",
-  "age_value": 4,
+  "sex": "female",
+  "age_group": "young",
+  "age_value": 2,
   "age_unit": "years",
-  "size": "small",
+  "size": "medium",
   "status": "available",
   "location_note": {
     "en": "Kherson region",
     "uk": "Херсонська область"
   },
-  "character_tags": "Тихий\nСамостійний\nДружелюбний",
+  "character_tags": "хороша\nвесела\nконтактна\nлагідна\nПовідець добре",
   "description_short": {
-    "en": "A quiet dog that is doing everything alright",
-    "uk": "Я добрий і лагідний, люблю бігати і гратися, дружу з іншими братиками і сестричками тут, в притулку"
+    "en": "Margosha\n\nAge: 2 years old | Height: 45 cm | Spayed & fully vaccinated\n\nLeash trained: Walks well on a leash.\n\nShe is missing part of a hind leg, but this doesn't stop her from running and playing completely normally! Margosha loves people, attention, and affection, instantly adoring anyone who gives her a little time. She is a wonderful, happy, friendly, and sweet dog. She can be a bit jealous, so if there are already dogs in the family, love and attention should be shared equally!",
+    "uk": "Маргоша.\nВік 2 роки, зріст 45 см, стерильна,  має всі щеплення.\nПовідець добре. Немає частини задньої кінцівки, але це не заважає їй бігати і гратися абсолютно нормально.\nМаргоша любить людей, увагу і ласку. Вона обожнює кожного, хто з нею знайомиться і приділяє хоч трохи часу. Собачка дуже хороша, весела, контактна і лагідна.\nТрохи ревнива. Тому якщо в родині вде є собачки, треба розподіляти увагу рівномірно)"
   },
   "description_full": {
-    "en": "Barsik is calm and observant. He needs time to adjust, but enjoys attention when he feels safe.",
-    "uk": "Барсик спокійний і уважний. Йому потрібен час, щоб звикнути, але коли він почувається безпечно, йому подобається увага."
+    "en": "Margosha — a joyful, loving soul with a heart full of sunshine 🐾✨\n\nMargosha is a bright, wonderful girl who has so much love to give! She is 2 years old, stands 45 cm tall, and is a complete bundle of happiness.\n\nPersonality: Margosha absolutely adores people, attention, and affection. She instantly falls in love with anyone who spends even a moment with her! She is cheerful, friendly, outgoing, and deeply sweet. She can be just a little jealous when it comes to affection, so if she goes to a home with other dogs, her humans will just need to share the love equally.\n\nSpecial Charm: She is missing part of one hind leg, but please don't let that fool you — it doesn't stop her at all. She runs, plays, and lives life to the absolute fullest just like any other dog.\n\nHealth: Fully healthy, spayed, and up-to-date on all vaccinations.\n\nMargosha is looking for a family who will embrace her joyful spirit and shower her with the affection she so richly deserves!",
+    "uk": "Маргоша — життєрадісне сонечко з неймовірно великим серцем 🐾✨\n\nМаргоша — це справжній промінчик світла, сповнений щастя та любові до всього світу! Їй 2 роки, вона має чудовий середній зріст (45 см) та океан ласки, яким готова поділитися зі своєю майбутньою родиною.\n\nХарактер: Маргоша просто обожнює людей, увагу та обійми. Вона закохується в кожного, хто приділяє їй бодай хвилиночку свого часу! Вона дуже хороша, весела, відкрита, контактна та ніжна дівчинка. Оскільки Маргоша дуже цінує увагу до себе, вона може бути дрібку ревнивою. Якщо у вашій родині вже є пухнастики, треба буде лише рівномірно ділити любов між усіма.\n\nОсоблива деталинка:  Через життєві обставини у неї немає частини задньої лапки, але це аж ніяк не заважає їй бігати, стрибати та гратися нарівні з іншими собачками! Вона справжній життєлюб.\n\nЗдоров'я: Абсолютно здорова, стерилізована та має всі необхідні щеплення.\n\nМаргоша створена для того, щоб приносити в дім радість і посмішки. Вона дуже чекає на людей, які закохаються в її життєрадісний характер і подарують їй омріяний дім!"
   },
   "health": {
-    "sterilized": "no",
+    "sterilized": "yes",
     "vaccinated": "yes",
     "special_needs": {
-      "en": "None known",
-      "uk": "Невідомо"
+      "en": "No",
+      "uk": "Ні"
     }
   },
   "compatibility": {
-    "children": "yes",
-    "cats": "yes",
-    "dogs": "no"
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
   },
   "photos": [
     "/images/test-pets/barsik.svg",
-    "/images/uploads/patroninohmatdyt28april202204.jpg"
+    "/images/uploads/img3216.jpeg",
+    "/images/uploads/img3217.jpeg",
+    "/images/uploads/img3215.jpeg",
+    "/images/uploads/img3214.jpeg"
   ],
   "contact": {
     "volunteer_slug": "placeholder-volunteer"
   },
   "featured": true,
-  "created_at": "2026-06-20",
-  "updated_at": "2026-06-26"
+  "created_at": "2026-07-24",
+  "updated_at": "2026-07-24"
 }
