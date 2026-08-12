@@ -1,0 +1,55 @@
+{
+  "slug": "drujok",
+  "name": {
+    "en": "Drujok",
+    "uk": "Дружок"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "People-Oriented / (Extremely friendly, open, and affectionate with everyone)\n\nBalanced-Energy /  (Enjoys games and play, but easygoing and calm when it's time to relax)\n\nJoyful & Cheerful / (A happy-go-lucky dog with a positive attitude)\n\nCuddle-Bug /  (Thrives on human touch, pets, and affection)\n\nLeash-Trained /  (Walks comfortably on a leash and behaves well on walks)",
+  "description_short": {
+    "en": "Looking for a Home for Druzhok! 🐾\nDruzhok is a 4-year-old boy (56 cm tall), neutered, fully vaccinated, and leash-trained. He is super friendly, joyful, and affectionate with a balanced, moderate energy level—loves games and cuddles equally! Contact us to adopt this sweet companion! ❤️",
+    "uk": "Шукаємо дім для Дружка! 🐾\nДружку 4 роки (56 см у холці). Кастрований, щеплений, ходить на повідочку. Він неймовірно дружній до людей, веселий, ласкавий та життєрадісний! Має середню активність — любить і побавитися, і просто побути поруч. Шукаємо для нього дбайливу родину. Пишіть у приватні повідомлення! ❤️"
+  },
+  "description_full": {
+    "en": "Druzhok — A Friendly, Joyful Companion Looking for Love!\n\nDruzhok (whose name literally means \"Little Friend\") truly lives up to his name! He is an exceptionally friendly, happy, and affectionate dog who adores being around people. With his moderate energy level, he strikes the perfect balance: he enjoys a fun game and active walks, but is equally content snuggling up and soaking in all the gentle head scratches you can offer.\n\nProfile & Details:\n\nAge: 4 years old\n\nHeight: 56 cm at the shoulder\n\nHealth: Neutered and fully vaccinated\n\nLeash Skills: Good on a leash, manageable and well-behaved\n\nDruzhok is ready to bring warmth, laughter, and endless loyalty to a loving family. Reach out today to make him part of your home!",
+    "uk": "Дружок — ваш ідеальний компаньйон та сонячний хлопчик!\n\nДружок — це справжнє втілення доброти та радості. Він надзвичайно любить людей, залюбки йде на контакт і щиро радіє кожній хвилині, проведеній разом. Це дуже веселий, життєрадісний і ласкавий пес, який подарує безліч теплих моментів своїм господарям. За рівнем енергії він помірно активний: любить гратися, але водночас чудово вміє відпочивати поруч із людиною.\n\nОсновна інформація:\n\nВік: 4 роки\n\nЗріст: 56 см у холці\n\nЗдоров'я: кастрований, повністю щеплений\n\nНавички: вміє ходити на повідочку, вихований та спокійний\n\nЯкщо ви шукаєте вірного, щирого та позитивного друга, Дружок чекає саме на вас!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3500.jpeg",
+    "/images/uploads/img3498.jpeg",
+    "/images/uploads/img3495.jpeg",
+    "/images/uploads/img3497.jpeg",
+    "/images/uploads/img3499.jpeg",
+    "/images/uploads/img3494.jpeg",
+    "/images/uploads/img3496.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-08-12",
+  "updated_at": "2026-08-12"
+}
