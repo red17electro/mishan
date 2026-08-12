@@ -1,0 +1,53 @@
+{
+  "slug": "alex",
+  "name": {
+    "en": "Alex",
+    "uk": "Алекс"
+  },
+  "species": "dog",
+  "sex": "male",
+  "age_group": "adult",
+  "age_value": 4,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "Resilient /(Overcame a car accident and broken leg without losing his cheerful spirit)\n\nHigh-Energy /(Loves running, playing, and moving freely despite his minor limp)\n\nFriendly & Social /(Enthusiastic with people and generally good with other dogs)\n\nPlayful /(A typical playful Husky personality full of joy)\n\nLeash-Trained / (Walks well on a leash and is ready for outdoor adventures)",
+  "description_short": {
+    "en": "Meet Alex the Husky! 🐾\nAlex is 4 years old (56 cm tall), neutered, vaccinated, and great on a leash. He is an amazingly friendly, cheerful, and active dog. Alex has a minor limp on his hind leg from a past car accident, but it doesn't stop him from running fast and moving freely! He gets along with most dogs and loves people. Contact us to give this resilient boy a home! ❤️",
+    "uk": "Шукаємо родину для хаскі Алекса! 🐾\nАлексу 4 роки (56 см). Він кастрований, щеплений, чудово ходить на повідочку. Алекс — надзвичайно добрий, веселий та активний пес. Через давній наїзд авто він трохи підкульгує на задню лапку, але це взагалі не заважає йому бігати та радіти життю! З собаками дружить (з вибором). Шукаємо для нього активну та люблячу сім'ю. Пишіть у приватні! ❤️"
+  },
+  "description_full": {
+    "en": "Alex — An Energetic & Joyful Husky Looking for His Forever Home!\n\nAlex is a true bundle of positive energy and resilience! Despite surviving a car accident, he hasn't lost an ounce of his enthusiasm or love for people. He is a friendly, affectionate, and cheerful guy who thrives on activity and human connection. He gets along well with other dogs, though he can be selective about his canine buddies.\n\nDue to a past injury (a broken leg from being hit by a car), Alex has a slight limp in his hind leg. However, this doesn't slow him down one bit—he still runs fast, moves freely, and enjoys every second of play!\n\nProfile & Details:\n\nBreed: Husky\n\nAge: 4 years old\n\nHeight: 56 cm at the shoulder\n\nHealth: Neutered, fully vaccinated (has a slight hind-leg limp from a healed injury)\n\nLeash Skills: Good on a leash, energetic and well-mannered\n\nAlex is looking for an active family who will appreciate his resilient spirit and loving nature. Reach out to meet this amazing boy!",
+    "uk": "Алекс — непосидючий і життєрадісний хаскі шукає дім!\n\nАлекс — це справжнє джерело позитиву та енергії! Попри пережиту аварію, він абсолютно не втратив жаги до життя та віри в людей. Це добрий, контактний і дуже веселий хлопець, який любить активність та спілкування. З іншими собаками ладнає добре, хоча вибирає друзів за симпатією.\n\nЧерез минулу травму (була зламана лапка після наїзду авто) Алекс трохи підкульгує на задню лапу, але це абсолютно не заважає йому активно бігати, гратися та насолоджуватися життям.\n\nОсновна інформація:\n\nПорода: Хаскі\n\nВік: 4 роки\n\nЗріст: 56 см у холці\n\nЗдоров'я: кастрований, щеплений, має особливість ходи після старої травми\n\nНавички: чудово знає повідець, активний та вихований\n\nАлекс шукає людей, які люблять активні прогулянки та готові подарувати йому турботу. Якщо ви шукаєте вірного та драйвового друга — Алекс чекає на вас!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3491.jpeg",
+    "/images/uploads/img3493.jpeg",
+    "/images/uploads/img3489.jpeg",
+    "/images/uploads/img3492.jpeg",
+    "/images/uploads/img3490.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-08-12",
+  "updated_at": "2026-08-12"
+}
