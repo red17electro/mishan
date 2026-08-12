@@ -1,0 +1,53 @@
+{
+  "slug": "dina",
+  "name": {
+    "en": "Dina",
+    "uk": "Діна"
+  },
+  "species": "dog",
+  "sex": "female",
+  "age_group": "young",
+  "age_value": 2,
+  "age_unit": "years",
+  "size": "medium",
+  "status": "available",
+  "location_note": {
+    "en": "Kherson region",
+    "uk": "Херсонська область"
+  },
+  "character_tags": "Resilient (Bounced back from severe neglect and abandonment)\n\nGentle-Natured (Calm, sweet, and affectionate with people)\n\nFriendly (Welcoming, approachable, and eager to connect)\n\nLeash-Trained (Well-behaved and manageable on walks)\n\nYoung Adult (At 2 years old, past the destructive puppy stage but full of life)",
+  "description_short": {
+    "en": "Looking for a Loving Home for Dina! 🐾\nDina is 2 years old (56 cm tall), fully vaccinated, spayed, and well-behaved on a leash.\n\nWe rescued her from a village where she was abandoned on a chain, completely emaciated. Despite her tragic past, Dina is an extraordinarily gentle, sweet, calm, and friendly girl who loves people. She is looking for a caring forever family who will give her the safe, happy life she deserves.",
+    "uk": "Шукаємо дім для Діни! 🐾\nДіні 2 роки (зріст 56 см). Вона стерилізована, щеплена та чудово ходить на повідочку.\n\nМи врятували її з села, де її залишили на ланцюгу голодувати. Вона була мов скелет, але не втратила віри в людей. За характером Діна — неймовірно добра, спокійна, ласкава та привітна дівчинка. Шукаємо для неї люблячу родину, яка більше ніколи її не зрадить.\n\nЗвертайтеся в приватні повідомлення, щоб познайомитися! ❤️"
+  },
+  "description_full": {
+    "en": "Dina — A Gentle Soul Ready for a Fresh Start\n\nDina is a dog of incredible sweetness, warmth, and resilience. It is hard to fathom what she went through: she was rescued from a village where her previous owners abandoned her to survive alone on a chain. When we first found Dina, she was severely emaciated—literally skin and bones. Yet despite the hardship and betrayal she endured, her loving spirit remains completely unbroken.\n\nToday, Dina is a truly wonderful, calm, and affectionate girl. She thrives on human connection, welcoming everyone with a friendly and quiet composure.\n\nProfile & Details:\n\nAge: 2 years old (an ideal age for settling into a new home)\n\nHeight: 56 cm at the shoulder\n\nHealth: Fully vaccinated and spayed\n\nLeash Skills: Walks calmly and comfortably on a leash\n\nDina is looking for a caring family who will offer her safety, warmth, and a forever home where she will never be abandoned again. In return, she will be the most loyal, loving companion you could ever ask for.\n\nIf you are ready to give Dina the happy life she deserves, please reach out to us today!",
+    "uk": "Діна — ніжне серце, яке знову вчиться довіряти\n\nДіна — це собака неймовірної доброти та душевного тепла. Важко уявити, через що їй довелося пройти: ми забрали її з села, де колишні господарі просто залишили її виживати на ланцюгу. Коли ми вперше побачили Діну, вона була виснажена до стану скелета. Але попри біль і зраду, її серце не зачерствіло.\n\nСьогодні це абсолютно чудова, спокійна та дуже привітна дівчинка. Вона неймовірно ласкава, любить людську увагу та з радістю йде на контакт.\n\nОсновна інформація про Діну:\n\nВік: 2 роки (найкращий вік для адаптації в новій родині).\n\nЗріст: 56 см у холці.\n\nЗдоров'я: повністю стерилізована, має всі необхідні щеплення.\n\nНавички: добре ходить на повідочку, поводиться спокійно та виховано.\n\nДіна шукає турботливу родину, яка подарує їй домашній затишок і більше ніколи не зрадить. Вона стане найвідданішим другом і справжньою окрасою вашого дому.\n\nЯкщо ви готові подарувати Діні щасливе життя, напишіть або зателефонуйте нам!"
+  },
+  "health": {
+    "sterilized": "yes",
+    "vaccinated": "yes",
+    "special_needs": {
+      "en": "None ",
+      "uk": "Ні"
+    }
+  },
+  "compatibility": {
+    "children": "unknown",
+    "cats": "unknown",
+    "dogs": "yes"
+  },
+  "photos": [
+    "/images/uploads/img3483.jpeg",
+    "/images/uploads/img3485.jpeg",
+    "/images/uploads/img3488.jpeg",
+    "/images/uploads/img3484.jpeg",
+    "/images/uploads/img3486.jpeg"
+  ],
+  "contact": {
+    "volunteer_slug": "placeholder-volunteer"
+  },
+  "featured": false,
+  "created_at": "2026-08-12",
+  "updated_at": "2026-08-12"
+}
